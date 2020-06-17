@@ -1,0 +1,246 @@
+= api_client.api.BaseEquipmentLengthApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:BaseEquipmentLengthApi.md#deleteEquipmentLength[*deleteEquipmentLength*]
+| *POST* /deleteEquipmentLength
+|
+
+| link:BaseEquipmentLengthApi.md#getEquipmentLength[*getEquipmentLength*]
+| *GET* /getEquipmentLength
+|
+
+| link:BaseEquipmentLengthApi.md#getEquipmentLengths[*getEquipmentLengths*]
+| *POST* /getEquipmentLengths
+|
+
+| link:BaseEquipmentLengthApi.md#saveEquipmentLength[*saveEquipmentLength*]
+| *POST* /saveEquipmentLength
+|
+|===
+
+= *deleteEquipmentLength*
+
+____
+deleteEquipmentLength(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseEquipmentLengthApi();
+var id = id_example; // String |
+
+try {
+    api_instance.deleteEquipmentLength(id);
+} catch (e) {
+    print("Exception when calling BaseEquipmentLengthApi->deleteEquipmentLength: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getEquipmentLength*
+
+____
+EquipmentLengthServiceModel getEquipmentLength(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseEquipmentLengthApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getEquipmentLength(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseEquipmentLengthApi->getEquipmentLength: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:EquipmentLengthServiceModel.adoc[*EquipmentLengthServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getEquipmentLengths*
+
+____
+QueryResultEquipmentLengthServiceModel getEquipmentLengths(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseEquipmentLengthApi();
+var request = new EquipmentLengthQueryRequest(); // EquipmentLengthQueryRequest |
+
+try {
+    var result = api_instance.getEquipmentLengths(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseEquipmentLengthApi->getEquipmentLengths: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:EquipmentLengthQueryRequest.adoc[*EquipmentLengthQueryRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:QueryResultEquipmentLengthServiceModel.adoc[*QueryResultEquipmentLengthServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *saveEquipmentLength*
+
+____
+EquipmentLengthServiceModel saveEquipmentLength(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseEquipmentLengthApi();
+var model = new EquipmentLengthServiceModel(); // EquipmentLengthServiceModel |
+
+try {
+    var result = api_instance.saveEquipmentLength(model);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseEquipmentLengthApi->saveEquipmentLength: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:EquipmentLengthServiceModel.adoc[*EquipmentLengthServiceModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:EquipmentLengthServiceModel.adoc[*EquipmentLengthServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]

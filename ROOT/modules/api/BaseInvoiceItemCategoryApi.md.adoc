@@ -1,0 +1,246 @@
+= api_client.api.BaseInvoiceItemCategoryApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:BaseInvoiceItemCategoryApi.md#deleteInvoiceItemCategory[*deleteInvoiceItemCategory*]
+| *POST* /deleteInvoiceItemCategory
+|
+
+| link:BaseInvoiceItemCategoryApi.md#getInvoiceItemCategories[*getInvoiceItemCategories*]
+| *POST* /getInvoiceItemCategories
+|
+
+| link:BaseInvoiceItemCategoryApi.md#getInvoiceItemCategory[*getInvoiceItemCategory*]
+| *GET* /getInvoiceItemCategory
+|
+
+| link:BaseInvoiceItemCategoryApi.md#saveInvoiceItemCategory[*saveInvoiceItemCategory*]
+| *POST* /saveInvoiceItemCategory
+|
+|===
+
+= *deleteInvoiceItemCategory*
+
+____
+deleteInvoiceItemCategory(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseInvoiceItemCategoryApi();
+var id = id_example; // String |
+
+try {
+    api_instance.deleteInvoiceItemCategory(id);
+} catch (e) {
+    print("Exception when calling BaseInvoiceItemCategoryApi->deleteInvoiceItemCategory: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getInvoiceItemCategories*
+
+____
+QueryResultInvoiceItemCategoryServiceModel getInvoiceItemCategories(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseInvoiceItemCategoryApi();
+var request = new InvoiceItemCategoryQueryRequest(); // InvoiceItemCategoryQueryRequest |
+
+try {
+    var result = api_instance.getInvoiceItemCategories(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseInvoiceItemCategoryApi->getInvoiceItemCategories: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:InvoiceItemCategoryQueryRequest.adoc[*InvoiceItemCategoryQueryRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:QueryResultInvoiceItemCategoryServiceModel.adoc[*QueryResultInvoiceItemCategoryServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getInvoiceItemCategory*
+
+____
+InvoiceItemCategoryServiceModel getInvoiceItemCategory(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseInvoiceItemCategoryApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getInvoiceItemCategory(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseInvoiceItemCategoryApi->getInvoiceItemCategory: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:InvoiceItemCategoryServiceModel.adoc[*InvoiceItemCategoryServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *saveInvoiceItemCategory*
+
+____
+InvoiceItemCategoryServiceModel saveInvoiceItemCategory(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseInvoiceItemCategoryApi();
+var model = new InvoiceItemCategoryServiceModel(); // InvoiceItemCategoryServiceModel |
+
+try {
+    var result = api_instance.saveInvoiceItemCategory(model);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseInvoiceItemCategoryApi->saveInvoiceItemCategory: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:InvoiceItemCategoryServiceModel.adoc[*InvoiceItemCategoryServiceModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:InvoiceItemCategoryServiceModel.adoc[*InvoiceItemCategoryServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]

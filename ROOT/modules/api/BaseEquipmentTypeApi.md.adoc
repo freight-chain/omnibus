@@ -1,0 +1,246 @@
+= api_client.api.BaseEquipmentTypeApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:BaseEquipmentTypeApi.md#deleteEquipmentType[*deleteEquipmentType*]
+| *POST* /deleteEquipmentType
+|
+
+| link:BaseEquipmentTypeApi.md#getEquipmentType[*getEquipmentType*]
+| *GET* /getEquipmentType
+|
+
+| link:BaseEquipmentTypeApi.md#getEquipmentTypes[*getEquipmentTypes*]
+| *POST* /getEquipmentTypes
+|
+
+| link:BaseEquipmentTypeApi.md#saveEquipmentType[*saveEquipmentType*]
+| *POST* /saveEquipmentType
+|
+|===
+
+= *deleteEquipmentType*
+
+____
+deleteEquipmentType(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseEquipmentTypeApi();
+var id = id_example; // String |
+
+try {
+    api_instance.deleteEquipmentType(id);
+} catch (e) {
+    print("Exception when calling BaseEquipmentTypeApi->deleteEquipmentType: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getEquipmentType*
+
+____
+EquipmentTypeServiceModel getEquipmentType(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseEquipmentTypeApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getEquipmentType(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseEquipmentTypeApi->getEquipmentType: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:EquipmentTypeServiceModel.adoc[*EquipmentTypeServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getEquipmentTypes*
+
+____
+QueryResultEquipmentTypeServiceModel getEquipmentTypes(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseEquipmentTypeApi();
+var request = new EquipmentTypeQueryRequest(); // EquipmentTypeQueryRequest |
+
+try {
+    var result = api_instance.getEquipmentTypes(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseEquipmentTypeApi->getEquipmentTypes: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:EquipmentTypeQueryRequest.adoc[*EquipmentTypeQueryRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:QueryResultEquipmentTypeServiceModel.adoc[*QueryResultEquipmentTypeServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *saveEquipmentType*
+
+____
+EquipmentTypeServiceModel saveEquipmentType(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseEquipmentTypeApi();
+var model = new EquipmentTypeServiceModel(); // EquipmentTypeServiceModel |
+
+try {
+    var result = api_instance.saveEquipmentType(model);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseEquipmentTypeApi->saveEquipmentType: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:EquipmentTypeServiceModel.adoc[*EquipmentTypeServiceModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:EquipmentTypeServiceModel.adoc[*EquipmentTypeServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]

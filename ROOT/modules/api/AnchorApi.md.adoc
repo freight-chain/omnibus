@@ -1,0 +1,75 @@
+= api_client.api.AnchorApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:AnchorApi.md#getDocument[*getDocument*]
+| *POST* /api/Anchor/document/\{referenceId}
+|
+|===
+
+= *getDocument*
+
+____
+Document getDocument(referenceId)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AnchorApi();
+var referenceId = referenceId_example; // String |
+
+try {
+    var result = api_instance.getDocument(referenceId);
+    print(result);
+} catch (e) {
+    print("Exception when calling AnchorApi->getDocument: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *referenceId*
+| *String*
+|
+|
+|===
+
+[discrete]
+=== Return type
+
+xref:Document.adoc[*Document*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]

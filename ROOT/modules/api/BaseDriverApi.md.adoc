@@ -1,0 +1,246 @@
+= api_client.api.BaseDriverApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:BaseDriverApi.md#deleteDriver[*deleteDriver*]
+| *POST* /deleteDriver
+|
+
+| link:BaseDriverApi.md#getDriver[*getDriver*]
+| *GET* /getDriver
+|
+
+| link:BaseDriverApi.md#getDrivers[*getDrivers*]
+| *POST* /getDrivers
+|
+
+| link:BaseDriverApi.md#saveDriver[*saveDriver*]
+| *POST* /saveDriver
+|
+|===
+
+= *deleteDriver*
+
+____
+deleteDriver(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseDriverApi();
+var id = id_example; // String |
+
+try {
+    api_instance.deleteDriver(id);
+} catch (e) {
+    print("Exception when calling BaseDriverApi->deleteDriver: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getDriver*
+
+____
+DriverServiceModel getDriver(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseDriverApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getDriver(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseDriverApi->getDriver: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:DriverServiceModel.adoc[*DriverServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getDrivers*
+
+____
+QueryResultDriverServiceModel getDrivers(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseDriverApi();
+var request = new DriverQueryRequest(); // DriverQueryRequest |
+
+try {
+    var result = api_instance.getDrivers(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseDriverApi->getDrivers: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:DriverQueryRequest.adoc[*DriverQueryRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:QueryResultDriverServiceModel.adoc[*QueryResultDriverServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *saveDriver*
+
+____
+DriverServiceModel saveDriver(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseDriverApi();
+var model = new DriverServiceModel(); // DriverServiceModel |
+
+try {
+    var result = api_instance.saveDriver(model);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseDriverApi->saveDriver: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:DriverServiceModel.adoc[*DriverServiceModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:DriverServiceModel.adoc[*DriverServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]

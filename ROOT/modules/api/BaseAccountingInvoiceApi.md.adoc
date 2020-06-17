@@ -1,0 +1,304 @@
+= api_client.api.BaseAccountingInvoiceApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:BaseAccountingInvoiceApi.md#deleteAccountingInvoice[*deleteAccountingInvoice*]
+| *POST* /deleteAccountingInvoice
+|
+
+| link:BaseAccountingInvoiceApi.md#getAccountingInvoice[*getAccountingInvoice*]
+| *GET* /getAccountingInvoice
+|
+
+| link:BaseAccountingInvoiceApi.md#getAccountingInvoices[*getAccountingInvoices*]
+| *POST* /getAccountingInvoices
+|
+
+| link:BaseAccountingInvoiceApi.md#saveAccountingInvoice[*saveAccountingInvoice*]
+| *POST* /saveAccountingInvoice
+|
+
+| link:BaseAccountingInvoiceApi.md#sendInvoice[*sendInvoice*]
+| *POST* /sendInvoice
+|
+|===
+
+= *deleteAccountingInvoice*
+
+____
+deleteAccountingInvoice(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseAccountingInvoiceApi();
+var id = id_example; // String |
+
+try {
+    api_instance.deleteAccountingInvoice(id);
+} catch (e) {
+    print("Exception when calling BaseAccountingInvoiceApi->deleteAccountingInvoice: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getAccountingInvoice*
+
+____
+AccountingInvoiceServiceModel getAccountingInvoice(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseAccountingInvoiceApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getAccountingInvoice(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseAccountingInvoiceApi->getAccountingInvoice: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:AccountingInvoiceServiceModel.adoc[*AccountingInvoiceServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getAccountingInvoices*
+
+____
+QueryResultAccountingInvoiceServiceModel getAccountingInvoices(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseAccountingInvoiceApi();
+var request = new AccountingInvoiceQueryRequest(); // AccountingInvoiceQueryRequest |
+
+try {
+    var result = api_instance.getAccountingInvoices(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseAccountingInvoiceApi->getAccountingInvoices: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:AccountingInvoiceQueryRequest.adoc[*AccountingInvoiceQueryRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:QueryResultAccountingInvoiceServiceModel.adoc[*QueryResultAccountingInvoiceServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *saveAccountingInvoice*
+
+____
+AccountingInvoiceServiceModel saveAccountingInvoice(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseAccountingInvoiceApi();
+var model = new AccountingInvoiceServiceModel(); // AccountingInvoiceServiceModel |
+
+try {
+    var result = api_instance.saveAccountingInvoice(model);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseAccountingInvoiceApi->saveAccountingInvoice: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:AccountingInvoiceServiceModel.adoc[*AccountingInvoiceServiceModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:AccountingInvoiceServiceModel.adoc[*AccountingInvoiceServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *sendInvoice*
+
+____
+AccountingInvoiceServiceModel sendInvoice(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseAccountingInvoiceApi();
+var request = new SendInvoiceRequest(); // SendInvoiceRequest |
+
+try {
+    var result = api_instance.sendInvoice(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseAccountingInvoiceApi->sendInvoice: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:SendInvoiceRequest.adoc[*SendInvoiceRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:AccountingInvoiceServiceModel.adoc[*AccountingInvoiceServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]

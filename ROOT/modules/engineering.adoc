@@ -1,0 +1,73 @@
+= Engineering & Operations
+:idprefix:
+:idseparator: -
+:!example-caption:
+:!table-caption:
+:page-pagination:
+
+[[Overview of Benchmarking and Design]]
+
+== USE, Utilization, Saturation and Errors.
+
+link:http://www.brendangregg.com/usemethod.html[source, brendan gregg, Netflix]
+
+The USE Method can be summarized as:
+
+For every resource, check utilization, saturation, and errors.
+It's intended to be used early in a performance investigation, to identify systemic bottlenecks.
+
+Terminology definitions:
+
+- resource: all physical server functional components (CPUs, disks, busses, ...) [1]
+- utilization: the average time that the resource was busy servicing work [2]
+- saturation: the degree to which the resource has extra work which it can't service, often queued
+- errors: the count of error events
+
+The metrics are usually expressed in the following terms:
+
+- utilization: as a percent over a time interval. eg, "one disk is running at 90% utilization".
+- saturation: as a queue length. eg, "the CPUs have an average run queue length of four".
+- errors: scalar counts. eg, "this network interface has had fifty late collisions".
+
+=== Resource List
+
+- CPUs: sockets, cores, hardware threads (virtual CPUs)
+	- utilization, saturation
+- Memory: capacity
+	- utilization, saturation
+- Network interfaces
+	- utilization
+- Storage devices: I/O, capacity
+	- utilization, saturation, errors
+- Controllers: storage, network cards
+- Interconnects: CPUs, memory, I/O
+- JVM
+
+
+
+== Network Latency Performance
+
+To get maximal throughput it is critical to use optimal TCP send and receive socket buffer sizes for the link you are using. If the buffers are too small, the TCP congestion window will never fully open up. If the receiver buffers are too large, TCP flow control breaks and the sender can overrun the receiver, which will cause the TCP window to shut down. This is likely to happen if the sending host is faster than the receiving host.
+
+
+- The optimal buffer size is twice the bandwidth*delay product of the link:
+
+`buffer size = 2 * bandwidth * delay`
+
+For example, if your ping time is 50 ms, and the end-to-end network consists of all 1G or 10G Ethernet, the TCP buffers should be:
+
+`.05 sec * (1 Gbit / 8 bits) = 6.25 MBytes.`
+
+
+== Network Disk Performance
+
+10485760, 0xa00000
+
+=== I/O
+
+4,096 bytes = 4.096 kb
+
+
+As you fill the SSD-based instance store volumes for your instance, the number of write IOPS that you can achieve decreases. This is due to the extra work the SSD controller must do to find available space, rewrite existing data, and erase unused space so that it can be rewritten. This process of garbage collection results in internal write amplification to the SSD, expressed as the ratio of SSD write operations to user write operations. This decrease in performance is even larger if the write operations are not in multiples of 4,096 bytes or not aligned to a 4,096-byte boundary. If you write a smaller amount of bytes or bytes that are not aligned, the SSD controller must read the surrounding data and store the result in a new location. This pattern results in significantly increased write amplification, increased latency, and dramatically reduced I/O performance.
+
+link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/general-purpose-instances.html#general-purpose-network-performance[source, aws.]

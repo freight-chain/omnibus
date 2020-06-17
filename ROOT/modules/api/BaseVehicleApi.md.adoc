@@ -1,0 +1,246 @@
+= api_client.api.BaseVehicleApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:BaseVehicleApi.md#deleteVehicle[*deleteVehicle*]
+| *POST* /deleteVehicle
+|
+
+| link:BaseVehicleApi.md#getVehicle[*getVehicle*]
+| *GET* /getVehicle
+|
+
+| link:BaseVehicleApi.md#getVehicles[*getVehicles*]
+| *POST* /getVehicles
+|
+
+| link:BaseVehicleApi.md#saveVehicle[*saveVehicle*]
+| *POST* /saveVehicle
+|
+|===
+
+= *deleteVehicle*
+
+____
+deleteVehicle(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseVehicleApi();
+var id = id_example; // String |
+
+try {
+    api_instance.deleteVehicle(id);
+} catch (e) {
+    print("Exception when calling BaseVehicleApi->deleteVehicle: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getVehicle*
+
+____
+VehicleServiceModel getVehicle(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseVehicleApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getVehicle(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseVehicleApi->getVehicle: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:VehicleServiceModel.adoc[*VehicleServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getVehicles*
+
+____
+QueryResultVehicleServiceModel getVehicles(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseVehicleApi();
+var request = new VehicleQueryRequest(); // VehicleQueryRequest |
+
+try {
+    var result = api_instance.getVehicles(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseVehicleApi->getVehicles: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:VehicleQueryRequest.adoc[*VehicleQueryRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:QueryResultVehicleServiceModel.adoc[*QueryResultVehicleServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *saveVehicle*
+
+____
+VehicleServiceModel saveVehicle(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseVehicleApi();
+var model = new VehicleServiceModel(); // VehicleServiceModel |
+
+try {
+    var result = api_instance.saveVehicle(model);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseVehicleApi->saveVehicle: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:VehicleServiceModel.adoc[*VehicleServiceModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:VehicleServiceModel.adoc[*VehicleServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]

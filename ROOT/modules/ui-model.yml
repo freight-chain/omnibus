@@ -1,0 +1,286 @@
+antoraVersion: '1.0.0'
+site:
+  url: http://localhost:5252
+  title: Freight Trust & Clearing Omnibus
+  homeUrl: &home_url /index.html
+  components:
+  - name: Open Service Broker
+    title: EDI Service Bus
+    url: /index.html
+    versions:
+    - &latest_version_omnibus
+      url: '#' 
+      version: '3.1.0'
+      displayVersion: '3.1.0'
+    - url: '#' 
+      version: '3.0.0'
+      displayVersion: '3.0.0'
+    - url: /rulebook/1-general.md.html
+    latestVersion: *latest_version_omnibus
+  - &component
+    name: Global Data Service Interchange
+    title: Omnibus 
+    url: /rulebook/legal-parity.md.html
+    versions:
+    - &latest_version_besu
+      url: https://github.com/freight-chain
+      version: '1.4.5'
+      displayVersion: '1.4.5'
+    - &component_version
+      url: '#' 
+      version: '1.4.5'
+      displayVersion: '1.4.5'
+    - url: '#' 
+      version: '2.0.7'
+      displayVersion: '2.0.7'
+    latestVersion: *latest_version_besu
+  - name: Global Trade
+    title: Customs Interface
+    url: /tradedocs.html
+    versions:
+    - &latest_version_iso
+      url: /tradedocs.html 
+      version: 'USA'
+      displayVersion: 'USA'
+    - url: '#' 
+      version: 'CAD'
+      displayVersion: 'CA'
+    - url: '#' 
+      version: 'JPY'
+      displayVersion: 'JPY'
+    latestVersion: *latest_version_iso
+page:
+  url: *home_url
+  home: true
+  title: Network to Networks
+  component: *component
+  componentVersion: *component_version
+  version: '3.0.1'
+  displayVersion: '3.0.1'
+  module: ROOT
+  editUrl: http://gitlab.com/fr8/omnibus
+  origin:
+    private: false
+  previous:
+    content: Quickstart
+    url: '#'
+    urlType: 'internal'
+  next:
+    content: Rulebook
+    url: '#'
+    urlType: 'internal'
+  breadcrumbs:
+  - content: Freight Trust & Clearing
+    url: '#'
+    urlType: fragment
+  - content: Omnibus
+    url: '#'
+    urlType: internal
+  navigation:
+  - root: true
+    content: Rulebook
+    url: /rulebook/legal-parity.md.html
+    urlType: fragment
+    items:
+  - content: General
+    url: /rulebook/1-general.md.html
+    urlType: fragment
+  - content: Governance
+    url: /rulebook/2-governance.md.html
+    urlType: fragment
+  - content: Network Participants 
+    url: /rulebook/3-network-clearing-participants.md.html
+    urlType: fragment
+  - content: Delivery & Settlement
+    url: /rulebook/4-delivery-and-settlement.md.html
+    urlType: fragment
+  - content: Obligations
+    url: /rulebook/5-obligations.md.html
+    urlType: fragment
+  - content: Suspension
+    url: /rulebook/6-suspension.md.html
+    urlType: fragment
+  - content: Deliberation Rules
+    items:
+    - content: Business Rules
+      url: business-rules.html
+      urlType: fragment
+    - content: Namespace
+      url: ns.html
+      urlType: fragment
+    - content: Rules of Behavior
+      url: rules-of-behavior.html
+      urlType: fragment
+  - content: Deliberation Rules
+    items:
+    - content: Ecosystem
+      url: /whitepapers/ecosystem.html
+      urlType: fragment
+    - content: $EDI Token
+      url: /whitepapers/util.md.html
+      urlType: fragment
+  - content: Supply Chain
+    url: /supply-chain/README.md.html
+    urlType: fragment
+    items:
+    - content: Bills of Lading (211)
+      url: /supply-chain/bill-of-lading/bill-of-lading-rules.md.html
+      urlType: fragment
+    - content: Non Negotiable BOL
+      url: /supply-chain/bill-of-lading/non-negotiable-bol.md.html
+      urlType: fragment
+    - content: Customs & Freight Forwarders
+      url: /supply-chain/customs/customs-broker-power-of-attorney.md.html
+      urlType: fragment
+    - content: INCO Terms
+      url: /supply-chain/incoterms.md.html
+      urlType: fragment
+    - content: Warehouse Receipts
+      url: /supply-chain/warehouse/non-negotiable-warehouse-receipts.md.html
+      urlType: fragment
+    - content: EDI 856
+      url: /supply-chain/warehouse/856.html
+      urlType: fragment
+  - content: Blockchain Network
+    url: /blockchain/token-overview.md.html
+    urlType: fragment
+    items:
+    - content: Protocol
+      url: /blockchain/contracts-v1.md.html
+      urlType: fragment
+    - content: Token Mechanics
+      url: /blockchain/token-mechanics.md.html
+      urlType: fragment
+    - content: Token Utility 
+      url: /blockchain/pricing.md.html
+      urlType: fragment
+    - content: Token Staking
+      url: /blockchain/staking.html
+      urlType: fragment
+    - content: Network Upgrading
+      url: /blockchain/network-upgrade.md.html
+      urlType: fragment
+    - content: Wallets
+      url: /blockchain/add-metamask.md.html
+      urlType: fragment
+  - content: Staking and Nodes
+    url: /rules-of-behavior.md.html
+    urlType: fragment
+    items:
+    - content: ERC & Node Staking
+      url: /staking.html
+      urlType: fragment
+  - content: Network
+    url: '#'
+    urlType: fragment
+    items:
+    - content: Whitelists
+      url: /network/Updating-Whitelists.md.html
+      urlType: fragment
+    - content: Primitive Protocol Layer
+      url: /eas2.html
+      urlType: fragment
+    - content: Account Management 
+      url: /network/Account-Management.md.html
+      urlType: fragment
+    - content: Protocol Axioms
+      url: /whitepapers/axioms.html
+      urlType: fragment
+    - content: EDI Explainer
+      url: /blockchain/explain-edi.md.html
+      urlType: fragment
+    - content: Network Design
+      url: /whitepapers/network-design.html
+      urlType: fragment
+    - content: VBSM Methodology
+      url: /blockchain/vbsm.md.html
+      urlType: fragment
+    - content: Smart Contract
+      url: /whitepapers/smart-contract-practices.html
+      urlType: fragment 
+    - content: Smart Contract Best Practices
+      url: /blockchain/smart-contract-dev.html
+      urlType: fragment 
+    - content: Safety and Continiuty
+      url: /whitepapers/safety-and-continiuty.md.html
+      urlType: fragment 
+    - content: ADR Template
+      url: /whitepapers/adr.html
+      urlType: fragment 
+  - content: Pricing
+    url: '#'
+    urlType: fragment
+    items:
+    - content: Transaction Pricing
+      url: /corporate/transaction-pricing.html
+      urlType: fragment
+    - content: Pricing Specification Precedence
+      url: /corporate/pricing-spec-precedence.html
+      urlType: fragment
+    - content: Token Pricing
+      url: /blockchain/pricing.md.html
+      urlType: fragment       
+  - content: Enterprise
+    url: /eas2.html
+    urlType: fragment
+    items:
+    - content: Accepted Message Structures
+      url: /service-bus/message-structure.html
+      urlType: fragment
+    - content: Gateway 
+      url: /whitepapers/as2protocol.html
+      urlType: fragment
+    - content: B2B Message Protocols
+      url: /eas2.html
+      urlType: fragment
+    - content: X12/EDIFACT Interchange
+      url: /service-bus/edi-x12.md.html
+      urlType: fragment
+    - content: X12/EDIFACT Parser
+      url: /service-bus/x12-parser.md.html
+      urlType: fragment
+  - content: Engineering & Operations
+    url: /engineering.html
+    urlType: fragment
+    items:  
+    - content: Safety and Continiuty
+      url: /service-bus/safety-and-continiuty.md.html
+      urlType: fragment
+    - content: Incident Response Plan
+      url: /corporate/irp.html
+      urlType: fragment
+    - content: Defects
+      url: /corporate/defects.html
+      urlType: fragment
+    - content: Smart Contract Practices
+      url: /whitepapers/smart-contract-dev.html
+      urlType: fragment
+  - content: Corporate
+    url: '#'
+    urlType: fragment
+    items:
+    - content: Incident Response Plan
+      url: /corporate/irp.html
+      urlType: fragment
+    - content: Document Retention Policy
+      url: /corporate/document-retention-policy.html
+      urlType: fragment
+    - content: Safety and Continiuty
+      url: /service-bus/safety-and-continiuty.md.html
+      urlType: fragment
+    - content: Corporate Bylaws
+      url: /corporate/bylaws.md.html
+      urlType: fragment
+    - content: GPL Cooperation Commitment
+      url: /corporate/GPL-cooperation-commitment.md.html
+      urlType: fragment
+    - content: Code of Conduct
+      url: /corporate/privacy-policy.md.html
+      urlType: fragment
+    - content: CCPA
+      url: /corporate/ccpa.md.html
+      urlType: fragment
+  - content: Whitepapers
+    url: '#'
+    urlType: fragment
+    items:

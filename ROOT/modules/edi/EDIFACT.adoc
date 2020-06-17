@@ -1,0 +1,27 @@
+= EDIFACT Specification
+
+https://tools.ietf.org/html/rfc1767#page-2[RFC-1767]
+
+ Within EDIFACT, information is specified by:
+
+   MIME type name:               Application
+
+   MIME subtype name:            EDIFACT
+
+   Required parameters:          none
+
+   Optional parameters:          CHARSET, as defined for MIME
+
+   Encoding considerations:      May need BASE64 or QUOTED-PRINTABLE
+                                 transfer encoding
+
+   Security considerations:      See separate section in the
+                                 document.
+
+   Published specification:      Contained in the following section.
+
+   Rationale:                    The EDIFACT specifications are
+                                 accepted standards for a class of
+                                 inter-organization transactions;
+                                 this permits their transmission
+                                 over the Internet, via email.

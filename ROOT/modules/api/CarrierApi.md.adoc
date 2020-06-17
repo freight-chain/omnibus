@@ -1,0 +1,254 @@
+= api_client.api.CarrierApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:CarrierApi.md#deleteCarrier[*deleteCarrier*]
+| *POST* /api/Carrier/deleteCarrier
+|
+
+| link:CarrierApi.md#getCarrier[*getCarrier*]
+| *GET* /api/Carrier/getCarrier
+|
+
+| link:CarrierApi.md#getCarriers[*getCarriers*]
+| *POST* /api/Carrier/getCarriers
+|
+
+| link:CarrierApi.md#saveCarrier[*saveCarrier*]
+| *POST* /api/Carrier/saveCarrier
+|
+|===
+
+= *deleteCarrier*
+
+____
+deleteCarrier(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new CarrierApi();
+var id = id_example; // String |
+
+try {
+    api_instance.deleteCarrier(id);
+} catch (e) {
+    print("Exception when calling CarrierApi->deleteCarrier: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getCarrier*
+
+____
+CarrierServiceModel getCarrier(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new CarrierApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getCarrier(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling CarrierApi->getCarrier: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:CarrierServiceModel.adoc[*CarrierServiceModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getCarriers*
+
+____
+QueryResultCarrierServiceModel getCarriers(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new CarrierApi();
+var request = new CarrierQueryRequest(); // CarrierQueryRequest |
+
+try {
+    var result = api_instance.getCarriers(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling CarrierApi->getCarriers: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:CarrierQueryRequest.adoc[*CarrierQueryRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:QueryResultCarrierServiceModel.adoc[*QueryResultCarrierServiceModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *saveCarrier*
+
+____
+CarrierServiceModel saveCarrier(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new CarrierApi();
+var model = new CarrierServiceModel(); // CarrierServiceModel |
+
+try {
+    var result = api_instance.saveCarrier(model);
+    print(result);
+} catch (e) {
+    print("Exception when calling CarrierApi->saveCarrier: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:CarrierServiceModel.adoc[*CarrierServiceModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:CarrierServiceModel.adoc[*CarrierServiceModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]

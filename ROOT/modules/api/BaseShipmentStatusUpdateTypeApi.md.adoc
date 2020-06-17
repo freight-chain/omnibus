@@ -1,0 +1,246 @@
+= api_client.api.BaseShipmentStatusUpdateTypeApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:BaseShipmentStatusUpdateTypeApi.md#deleteShipmentStatusUpdateType[*deleteShipmentStatusUpdateType*]
+| *POST* /deleteShipmentStatusUpdateType
+|
+
+| link:BaseShipmentStatusUpdateTypeApi.md#getShipmentStatusUpdateType[*getShipmentStatusUpdateType*]
+| *GET* /getShipmentStatusUpdateType
+|
+
+| link:BaseShipmentStatusUpdateTypeApi.md#getShipmentStatusUpdateTypes[*getShipmentStatusUpdateTypes*]
+| *POST* /getShipmentStatusUpdateTypes
+|
+
+| link:BaseShipmentStatusUpdateTypeApi.md#saveShipmentStatusUpdateType[*saveShipmentStatusUpdateType*]
+| *POST* /saveShipmentStatusUpdateType
+|
+|===
+
+= *deleteShipmentStatusUpdateType*
+
+____
+deleteShipmentStatusUpdateType(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseShipmentStatusUpdateTypeApi();
+var id = id_example; // String |
+
+try {
+    api_instance.deleteShipmentStatusUpdateType(id);
+} catch (e) {
+    print("Exception when calling BaseShipmentStatusUpdateTypeApi->deleteShipmentStatusUpdateType: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getShipmentStatusUpdateType*
+
+____
+ShipmentStatusUpdateTypeServiceModel getShipmentStatusUpdateType(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseShipmentStatusUpdateTypeApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getShipmentStatusUpdateType(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseShipmentStatusUpdateTypeApi->getShipmentStatusUpdateType: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:ShipmentStatusUpdateTypeServiceModel.adoc[*ShipmentStatusUpdateTypeServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getShipmentStatusUpdateTypes*
+
+____
+QueryResultShipmentStatusUpdateTypeServiceModel getShipmentStatusUpdateTypes(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseShipmentStatusUpdateTypeApi();
+var request = new ShipmentStatusUpdateTypeQueryRequest(); // ShipmentStatusUpdateTypeQueryRequest |
+
+try {
+    var result = api_instance.getShipmentStatusUpdateTypes(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseShipmentStatusUpdateTypeApi->getShipmentStatusUpdateTypes: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:ShipmentStatusUpdateTypeQueryRequest.adoc[*ShipmentStatusUpdateTypeQueryRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:QueryResultShipmentStatusUpdateTypeServiceModel.adoc[*QueryResultShipmentStatusUpdateTypeServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *saveShipmentStatusUpdateType*
+
+____
+ShipmentStatusUpdateTypeServiceModel saveShipmentStatusUpdateType(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseShipmentStatusUpdateTypeApi();
+var model = new ShipmentStatusUpdateTypeServiceModel(); // ShipmentStatusUpdateTypeServiceModel |
+
+try {
+    var result = api_instance.saveShipmentStatusUpdateType(model);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseShipmentStatusUpdateTypeApi->saveShipmentStatusUpdateType: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:ShipmentStatusUpdateTypeServiceModel.adoc[*ShipmentStatusUpdateTypeServiceModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:ShipmentStatusUpdateTypeServiceModel.adoc[*ShipmentStatusUpdateTypeServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]

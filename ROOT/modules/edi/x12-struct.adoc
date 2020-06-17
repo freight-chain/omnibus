@@ -1,0 +1,19 @@
+
+
+X-12 File Structure 
+
+  +----- Interchange Control Header    ISA     Mandatory
+  | +--- Functional Group Header       GS      Conditional
+  | | +- Transaction Set Header        ST      Mandatory
+  | | |  Transaction Data                      As required
+  | | +- Transaction Set Trailer       SE      Mandatory
+  | +--- Functional Group Trailer      GE      Conditional
+  +----- Interchange Control Trailer   IEA     Mandatory
+
+
+[source, markdown]
+----
+Segment delimiter        ~     tilde        Hex: 0x7E
+Element delimiter        *     asterisk     Hex: 0x2A
+Subelement delimiter     :     colon        Hex: 0x3A
+----

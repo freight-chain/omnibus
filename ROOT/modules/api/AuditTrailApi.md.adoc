@@ -1,0 +1,254 @@
+= api_client.api.AuditTrailApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:AuditTrailApi.md#deleteAuditTrail[*deleteAuditTrail*]
+| *POST* /api/AuditTrail/deleteAuditTrail
+|
+
+| link:AuditTrailApi.md#getAuditTrail[*getAuditTrail*]
+| *GET* /api/AuditTrail/getAuditTrail
+|
+
+| link:AuditTrailApi.md#getAuditTrails[*getAuditTrails*]
+| *POST* /api/AuditTrail/getAuditTrails
+|
+
+| link:AuditTrailApi.md#saveAuditTrail[*saveAuditTrail*]
+| *POST* /api/AuditTrail/saveAuditTrail
+|
+|===
+
+= *deleteAuditTrail*
+
+____
+deleteAuditTrail(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AuditTrailApi();
+var id = id_example; // String |
+
+try {
+    api_instance.deleteAuditTrail(id);
+} catch (e) {
+    print("Exception when calling AuditTrailApi->deleteAuditTrail: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getAuditTrail*
+
+____
+AuditTrailServiceModel getAuditTrail(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AuditTrailApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getAuditTrail(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling AuditTrailApi->getAuditTrail: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:AuditTrailServiceModel.adoc[*AuditTrailServiceModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getAuditTrails*
+
+____
+QueryResultAuditTrailServiceModel getAuditTrails(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AuditTrailApi();
+var request = new AuditTrailQueryRequest(); // AuditTrailQueryRequest |
+
+try {
+    var result = api_instance.getAuditTrails(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling AuditTrailApi->getAuditTrails: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:AuditTrailQueryRequest.adoc[*AuditTrailQueryRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:QueryResultAuditTrailServiceModel.adoc[*QueryResultAuditTrailServiceModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *saveAuditTrail*
+
+____
+AuditTrailServiceModel saveAuditTrail(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AuditTrailApi();
+var model = new AuditTrailServiceModel(); // AuditTrailServiceModel |
+
+try {
+    var result = api_instance.saveAuditTrail(model);
+    print(result);
+} catch (e) {
+    print("Exception when calling AuditTrailApi->saveAuditTrail: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:AuditTrailServiceModel.adoc[*AuditTrailServiceModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:AuditTrailServiceModel.adoc[*AuditTrailServiceModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]

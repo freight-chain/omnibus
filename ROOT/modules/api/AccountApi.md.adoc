@@ -1,0 +1,2515 @@
+= api_client.api.AccountApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:AccountApi.md#activateAccountWithPassword[*activateAccountWithPassword*]
+| *POST* /api/Account/activateAccountWithPassword
+|
+
+| link:AccountApi.md#confirmEmail[*confirmEmail*]
+| *POST* /api/Account/confirmEmail
+|
+
+| link:AccountApi.md#createCompanySubdomain[*createCompanySubdomain*]
+| *POST* /api/Account/company/subdomain/\{id}
+|
+
+| link:AccountApi.md#createPermission[*createPermission*]
+| *POST* /api/Account/permissions
+|
+
+| link:AccountApi.md#createRole[*createRole*]
+| *POST* /api/Account/roles
+|
+
+| link:AccountApi.md#deleteCompany[*deleteCompany*]
+| *DELETE* /api/Account/companies/\{id}
+|
+
+| link:AccountApi.md#deletePermission[*deletePermission*]
+| *DELETE* /api/Account/permissions/\{id}
+|
+
+| link:AccountApi.md#deleteRole[*deleteRole*]
+| *DELETE* /api/Account/roles/\{id}
+|
+
+| link:AccountApi.md#deleteUser[*deleteUser*]
+| *DELETE* /api/Account/users/\{id}
+|
+
+| link:AccountApi.md#forgotPassword[*forgotPassword*]
+| *POST* /api/Account/forgotPassword
+|
+
+| link:AccountApi.md#getAllPermissions[*getAllPermissions*]
+| *GET* /api/Account/permissions
+|
+
+| link:AccountApi.md#getCompanies[*getCompanies*]
+| *POST* /api/Account/companies
+|
+
+| link:AccountApi.md#getCompany[*getCompany*]
+| *GET* /api/Account/company
+|
+
+| link:AccountApi.md#getCompanyById[*getCompanyById*]
+| *GET* /api/Account/company/\{id}
+|
+
+| link:AccountApi.md#getCurrentUser[*getCurrentUser*]
+| *GET* /api/Account/users/me
+|
+
+| link:AccountApi.md#getRoleById[*getRoleById*]
+| *GET* /api/Account/roles/\{id}
+|
+
+| link:AccountApi.md#getRoleByName[*getRoleByName*]
+| *GET* /api/Account/roles/name/\{name}
+|
+
+| link:AccountApi.md#getRoles[*getRoles*]
+| *GET* /api/Account/roles
+|
+
+| link:AccountApi.md#getRolesEditable[*getRolesEditable*]
+| *GET* /api/Account/roles/editable
+|
+
+| link:AccountApi.md#getRolesEditablePaging[*getRolesEditablePaging*]
+| *GET* /api/Account/roles/editable/\{page}/\{pageSize}
+|
+
+| link:AccountApi.md#getRoles_0[*getRoles_0*]
+| *GET* /api/Account/roles/\{page}/\{pageSize}
+|
+
+| link:AccountApi.md#getUserById[*getUserById*]
+| *GET* /api/Account/users/\{id}
+|
+
+| link:AccountApi.md#getUserByUserName[*getUserByUserName*]
+| *GET* /api/Account/users/username/\{userName}
+|
+
+| link:AccountApi.md#getUsers[*getUsers*]
+| *GET* /api/Account/users
+|
+
+| link:AccountApi.md#getUsersByCurrentCompany[*getUsersByCurrentCompany*]
+| *GET* /api/Account/users/company
+|
+
+| link:AccountApi.md#getUsersByCurrentCompany_0[*getUsersByCurrentCompany_0*]
+| *GET* /api/Account/users/company/\{page}/\{pageSize}
+|
+
+| link:AccountApi.md#getUsers_0[*getUsers_0*]
+| *GET* /api/Account/users/\{page}/\{pageSize}/\{companyId}
+|
+
+| link:AccountApi.md#register[*register*]
+| *POST* /api/Account/users
+|
+
+| link:AccountApi.md#registerCompany[*registerCompany*]
+| *POST* /api/Account/registerCompany
+|
+
+| link:AccountApi.md#registerUserForCurrentCompany[*registerUserForCurrentCompany*]
+| *POST* /api/Account/users/company
+|
+
+| link:AccountApi.md#resendAccountActivationEmail[*resendAccountActivationEmail*]
+| *POST* /api/Account/resendAccountActivationEmail
+|
+
+| link:AccountApi.md#resetPassword[*resetPassword*]
+| *POST* /api/Account/resetPassword
+|
+
+| link:AccountApi.md#unblockUser[*unblockUser*]
+| *PUT* /api/Account/users/unblock/\{id}
+|
+
+| link:AccountApi.md#updateCompany[*updateCompany*]
+| *POST* /api/Account/company
+|
+
+| link:AccountApi.md#updateCurrentUser[*updateCurrentUser*]
+| *PUT* /api/Account/users/me
+|
+
+| link:AccountApi.md#updateCurrentUser_0[*updateCurrentUser_0*]
+| *PATCH* /api/Account/users/me
+|
+
+| link:AccountApi.md#updatePermission[*updatePermission*]
+| *PUT* /api/Account/permissions/\{id}
+|
+
+| link:AccountApi.md#updateRole[*updateRole*]
+| *PUT* /api/Account/roles/\{id}
+|
+
+| link:AccountApi.md#updateUser[*updateUser*]
+| *PUT* /api/Account/users/\{id}
+|
+
+| link:AccountApi.md#updateUser_0[*updateUser_0*]
+| *PATCH* /api/Account/users/\{id}
+|
+
+| link:AccountApi.md#userPreferences[*userPreferences*]
+| *GET* /api/Account/users/me/preferences
+|
+
+| link:AccountApi.md#userPreferences_0[*userPreferences_0*]
+| *PUT* /api/Account/users/me/preferences
+|
+|===
+
+= *activateAccountWithPassword*
+
+____
+activateAccountWithPassword(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var model = new ResetPasswordViewModel(); // ResetPasswordViewModel |
+
+try {
+    api_instance.activateAccountWithPassword(model);
+} catch (e) {
+    print("Exception when calling AccountApi->activateAccountWithPassword: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:ResetPasswordViewModel.adoc[*ResetPasswordViewModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *confirmEmail*
+
+____
+confirmEmail(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var model = new ConfirmEmailViewModel(); // ConfirmEmailViewModel |
+
+try {
+    api_instance.confirmEmail(model);
+} catch (e) {
+    print("Exception when calling AccountApi->confirmEmail: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:ConfirmEmailViewModel.adoc[*ConfirmEmailViewModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *createCompanySubdomain*
+
+____
+CompanyServiceModel createCompanySubdomain(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.createCompanySubdomain(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountApi->createCompanySubdomain: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+|
+|===
+
+[discrete]
+=== Return type
+
+xref:CompanyServiceModel.adoc[*CompanyServiceModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *createPermission*
+
+____
+PermissionViewModel createPermission(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var model = new PermissionViewModel(); // PermissionViewModel |
+
+try {
+    var result = api_instance.createPermission(model);
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountApi->createPermission: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:PermissionViewModel.adoc[*PermissionViewModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:PermissionViewModel.adoc[*PermissionViewModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *createRole*
+
+____
+createRole(role)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var role = new RoleViewModel(); // RoleViewModel |
+
+try {
+    api_instance.createRole(role);
+} catch (e) {
+    print("Exception when calling AccountApi->createRole: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *role*
+| xref:RoleViewModel.adoc[*RoleViewModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *deleteCompany*
+
+____
+CompanyServiceModel deleteCompany(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.deleteCompany(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountApi->deleteCompany: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+|
+|===
+
+[discrete]
+=== Return type
+
+xref:CompanyServiceModel.adoc[*CompanyServiceModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *deletePermission*
+
+____
+PermissionViewModel deletePermission(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.deletePermission(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountApi->deletePermission: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+|
+|===
+
+[discrete]
+=== Return type
+
+xref:PermissionViewModel.adoc[*PermissionViewModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *deleteRole*
+
+____
+RoleViewModel deleteRole(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.deleteRole(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountApi->deleteRole: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+|
+|===
+
+[discrete]
+=== Return type
+
+xref:RoleViewModel.adoc[*RoleViewModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *deleteUser*
+
+____
+UserViewModel deleteUser(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.deleteUser(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountApi->deleteUser: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+|
+|===
+
+[discrete]
+=== Return type
+
+xref:UserViewModel.adoc[*UserViewModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *forgotPassword*
+
+____
+forgotPassword(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var model = new ForgotPasswordViewModel(); // ForgotPasswordViewModel |
+
+try {
+    api_instance.forgotPassword(model);
+} catch (e) {
+    print("Exception when calling AccountApi->forgotPassword: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:ForgotPasswordViewModel.adoc[*ForgotPasswordViewModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getAllPermissions*
+
+____
+List+++<PermissionViewModel>+++getAllPermissions()+++</PermissionViewModel>+++
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+
+try {
+    var result = api_instance.getAllPermissions();
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountApi->getAllPermissions: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+This endpoint does not need any parameter.
+
+[discrete]
+=== Return type
+
+[**List+++<PermissionViewModel>+++**](PermissionViewModel.md)+++</PermissionViewModel>+++
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getCompanies*
+
+____
+QueryResultCompanyServiceModel getCompanies(query)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var query = new Query(); // Query |
+
+try {
+    var result = api_instance.getCompanies(query);
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountApi->getCompanies: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *query*
+| xref:Query.adoc[*Query*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:QueryResultCompanyServiceModel.adoc[*QueryResultCompanyServiceModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getCompany*
+
+____
+CompanyServiceModel getCompany()
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+
+try {
+    var result = api_instance.getCompany();
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountApi->getCompany: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+This endpoint does not need any parameter.
+
+[discrete]
+=== Return type
+
+xref:CompanyServiceModel.adoc[*CompanyServiceModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getCompanyById*
+
+____
+CompanyViewModel getCompanyById(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getCompanyById(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountApi->getCompanyById: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+|
+|===
+
+[discrete]
+=== Return type
+
+xref:CompanyViewModel.adoc[*CompanyViewModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getCurrentUser*
+
+____
+UserViewModel getCurrentUser()
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+
+try {
+    var result = api_instance.getCurrentUser();
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountApi->getCurrentUser: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+This endpoint does not need any parameter.
+
+[discrete]
+=== Return type
+
+xref:UserViewModel.adoc[*UserViewModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getRoleById*
+
+____
+RoleViewModel getRoleById(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getRoleById(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountApi->getRoleById: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+|
+|===
+
+[discrete]
+=== Return type
+
+xref:RoleViewModel.adoc[*RoleViewModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getRoleByName*
+
+____
+RoleViewModel getRoleByName(name)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var name = name_example; // String |
+
+try {
+    var result = api_instance.getRoleByName(name);
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountApi->getRoleByName: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *name*
+| *String*
+|
+|
+|===
+
+[discrete]
+=== Return type
+
+xref:RoleViewModel.adoc[*RoleViewModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getRoles*
+
+____
+List+++<RoleViewModel>+++getRoles()+++</RoleViewModel>+++
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+
+try {
+    var result = api_instance.getRoles();
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountApi->getRoles: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+This endpoint does not need any parameter.
+
+[discrete]
+=== Return type
+
+[**List+++<RoleViewModel>+++**](RoleViewModel.md)+++</RoleViewModel>+++
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getRolesEditable*
+
+____
+List+++<RoleViewModel>+++getRolesEditable()+++</RoleViewModel>+++
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+
+try {
+    var result = api_instance.getRolesEditable();
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountApi->getRolesEditable: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+This endpoint does not need any parameter.
+
+[discrete]
+=== Return type
+
+[**List+++<RoleViewModel>+++**](RoleViewModel.md)+++</RoleViewModel>+++
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getRolesEditablePaging*
+
+____
+List+++<RoleViewModel>+++getRolesEditablePaging(page, pageSize)+++</RoleViewModel>+++
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var page = 56; // int |
+var pageSize = 56; // int |
+
+try {
+    var result = api_instance.getRolesEditablePaging(page, pageSize);
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountApi->getRolesEditablePaging: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *page*
+| *int*
+|
+|
+
+| *pageSize*
+| *int*
+|
+|
+|===
+
+[discrete]
+=== Return type
+
+[**List+++<RoleViewModel>+++**](RoleViewModel.md)+++</RoleViewModel>+++
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getRoles_0*
+
+____
+List+++<RoleViewModel>+++getRoles_0(page, pageSize, onlyEditableRoles)+++</RoleViewModel>+++
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var page = 56; // int |
+var pageSize = 56; // int |
+var onlyEditableRoles = true; // bool |
+
+try {
+    var result = api_instance.getRoles_0(page, pageSize, onlyEditableRoles);
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountApi->getRoles_0: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *page*
+| *int*
+|
+|
+
+| *pageSize*
+| *int*
+|
+|
+
+| *onlyEditableRoles*
+| *bool*
+|
+| [optional] [default to false]
+|===
+
+[discrete]
+=== Return type
+
+[**List+++<RoleViewModel>+++**](RoleViewModel.md)+++</RoleViewModel>+++
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getUserById*
+
+____
+UserViewModel getUserById(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getUserById(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountApi->getUserById: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+|
+|===
+
+[discrete]
+=== Return type
+
+xref:UserViewModel.adoc[*UserViewModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getUserByUserName*
+
+____
+UserViewModel getUserByUserName(userName)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var userName = userName_example; // String |
+
+try {
+    var result = api_instance.getUserByUserName(userName);
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountApi->getUserByUserName: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *userName*
+| *String*
+|
+|
+|===
+
+[discrete]
+=== Return type
+
+xref:UserViewModel.adoc[*UserViewModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getUsers*
+
+____
+List+++<UserViewModel>+++getUsers()+++</UserViewModel>+++
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+
+try {
+    var result = api_instance.getUsers();
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountApi->getUsers: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+This endpoint does not need any parameter.
+
+[discrete]
+=== Return type
+
+[**List+++<UserViewModel>+++**](UserViewModel.md)+++</UserViewModel>+++
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getUsersByCurrentCompany*
+
+____
+List+++<UserViewModel>+++getUsersByCurrentCompany()+++</UserViewModel>+++
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+
+try {
+    var result = api_instance.getUsersByCurrentCompany();
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountApi->getUsersByCurrentCompany: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+This endpoint does not need any parameter.
+
+[discrete]
+=== Return type
+
+[**List+++<UserViewModel>+++**](UserViewModel.md)+++</UserViewModel>+++
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getUsersByCurrentCompany_0*
+
+____
+List+++<UserViewModel>+++getUsersByCurrentCompany_0(page, pageSize)+++</UserViewModel>+++
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var page = 56; // int |
+var pageSize = 56; // int |
+
+try {
+    var result = api_instance.getUsersByCurrentCompany_0(page, pageSize);
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountApi->getUsersByCurrentCompany_0: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *page*
+| *int*
+|
+|
+
+| *pageSize*
+| *int*
+|
+|
+|===
+
+[discrete]
+=== Return type
+
+[**List+++<UserViewModel>+++**](UserViewModel.md)+++</UserViewModel>+++
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getUsers_0*
+
+____
+List+++<UserViewModel>+++getUsers_0(page, pageSize, companyId)+++</UserViewModel>+++
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var page = 56; // int |
+var pageSize = 56; // int |
+var companyId = companyId_example; // String |
+
+try {
+    var result = api_instance.getUsers_0(page, pageSize, companyId);
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountApi->getUsers_0: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *page*
+| *int*
+|
+|
+
+| *pageSize*
+| *int*
+|
+|
+
+| *companyId*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+[**List+++<UserViewModel>+++**](UserViewModel.md)+++</UserViewModel>+++
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *register*
+
+____
+register(user)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var user = new UserEditViewModel(); // UserEditViewModel |
+
+try {
+    api_instance.register(user);
+} catch (e) {
+    print("Exception when calling AccountApi->register: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *user*
+| xref:UserEditViewModel.adoc[*UserEditViewModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *registerCompany*
+
+____
+registerCompany(registration)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var registration = new RegisterCompanyViewModel(); // RegisterCompanyViewModel |
+
+try {
+    api_instance.registerCompany(registration);
+} catch (e) {
+    print("Exception when calling AccountApi->registerCompany: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *registration*
+| xref:RegisterCompanyViewModel.adoc[*RegisterCompanyViewModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *registerUserForCurrentCompany*
+
+____
+registerUserForCurrentCompany(user)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var user = new UserEditViewModel(); // UserEditViewModel |
+
+try {
+    api_instance.registerUserForCurrentCompany(user);
+} catch (e) {
+    print("Exception when calling AccountApi->registerUserForCurrentCompany: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *user*
+| xref:UserEditViewModel.adoc[*UserEditViewModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *resendAccountActivationEmail*
+
+____
+resendAccountActivationEmail(email)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var email = email_example; // String |
+
+try {
+    api_instance.resendAccountActivationEmail(email);
+} catch (e) {
+    print("Exception when calling AccountApi->resendAccountActivationEmail: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *email*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *resetPassword*
+
+____
+resetPassword(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var model = new ResetPasswordViewModel(); // ResetPasswordViewModel |
+
+try {
+    api_instance.resetPassword(model);
+} catch (e) {
+    print("Exception when calling AccountApi->resetPassword: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:ResetPasswordViewModel.adoc[*ResetPasswordViewModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *unblockUser*
+
+____
+unblockUser(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var id = id_example; // String |
+
+try {
+    api_instance.unblockUser(id);
+} catch (e) {
+    print("Exception when calling AccountApi->unblockUser: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+|
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *updateCompany*
+
+____
+CompanyServiceModel updateCompany(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var model = new CompanyServiceModel(); // CompanyServiceModel |
+
+try {
+    var result = api_instance.updateCompany(model);
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountApi->updateCompany: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:CompanyServiceModel.adoc[*CompanyServiceModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:CompanyServiceModel.adoc[*CompanyServiceModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *updateCurrentUser*
+
+____
+updateCurrentUser(user)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var user = new UserEditViewModel(); // UserEditViewModel |
+
+try {
+    api_instance.updateCurrentUser(user);
+} catch (e) {
+    print("Exception when calling AccountApi->updateCurrentUser: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *user*
+| xref:UserEditViewModel.adoc[*UserEditViewModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *updateCurrentUser_0*
+
+____
+updateCurrentUser_0(patch)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var patch = [new List&lt;Operation&gt;()]; // List<Operation> |
+
+try {
+    api_instance.updateCurrentUser_0(patch);
+} catch (e) {
+    print("Exception when calling AccountApi->updateCurrentUser_0: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *patch*
+| xref:Operation.adoc[*List<Operation>*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *updatePermission*
+
+____
+PermissionViewModel updatePermission(id, model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var id = id_example; // String |
+var model = new PermissionViewModel(); // PermissionViewModel |
+
+try {
+    var result = api_instance.updatePermission(id, model);
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountApi->updatePermission: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+|
+
+| *model*
+| xref:PermissionViewModel.adoc[*PermissionViewModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:PermissionViewModel.adoc[*PermissionViewModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *updateRole*
+
+____
+updateRole(id, role)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var id = id_example; // String |
+var role = new RoleViewModel(); // RoleViewModel |
+
+try {
+    api_instance.updateRole(id, role);
+} catch (e) {
+    print("Exception when calling AccountApi->updateRole: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+|
+
+| *role*
+| xref:RoleViewModel.adoc[*RoleViewModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *updateUser*
+
+____
+updateUser(id, user)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var id = id_example; // String |
+var user = new UserEditViewModel(); // UserEditViewModel |
+
+try {
+    api_instance.updateUser(id, user);
+} catch (e) {
+    print("Exception when calling AccountApi->updateUser: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+|
+
+| *user*
+| xref:UserEditViewModel.adoc[*UserEditViewModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *updateUser_0*
+
+____
+updateUser_0(id, patch)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var id = id_example; // String |
+var patch = [new List&lt;Operation&gt;()]; // List<Operation> |
+
+try {
+    api_instance.updateUser_0(id, patch);
+} catch (e) {
+    print("Exception when calling AccountApi->updateUser_0: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+|
+
+| *patch*
+| xref:Operation.adoc[*List<Operation>*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *userPreferences*
+
+____
+String userPreferences()
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+
+try {
+    var result = api_instance.userPreferences();
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountApi->userPreferences: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+This endpoint does not need any parameter.
+
+[discrete]
+=== Return type
+
+*String*
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *userPreferences_0*
+
+____
+userPreferences_0(data)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountApi();
+var data = new String(); // String |
+
+try {
+    api_instance.userPreferences_0(data);
+} catch (e) {
+    print("Exception when calling AccountApi->userPreferences_0: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *data*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]

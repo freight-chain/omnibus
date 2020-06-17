@@ -1,0 +1,246 @@
+= api_client.api.BaseNmfcNumberApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:BaseNmfcNumberApi.md#deleteNmfcNumber[*deleteNmfcNumber*]
+| *POST* /deleteNmfcNumber
+|
+
+| link:BaseNmfcNumberApi.md#getNmfcNumber[*getNmfcNumber*]
+| *GET* /getNmfcNumber
+|
+
+| link:BaseNmfcNumberApi.md#getNmfcNumbers[*getNmfcNumbers*]
+| *POST* /getNmfcNumbers
+|
+
+| link:BaseNmfcNumberApi.md#saveNmfcNumber[*saveNmfcNumber*]
+| *POST* /saveNmfcNumber
+|
+|===
+
+= *deleteNmfcNumber*
+
+____
+deleteNmfcNumber(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseNmfcNumberApi();
+var id = id_example; // String |
+
+try {
+    api_instance.deleteNmfcNumber(id);
+} catch (e) {
+    print("Exception when calling BaseNmfcNumberApi->deleteNmfcNumber: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getNmfcNumber*
+
+____
+NmfcNumberServiceModel getNmfcNumber(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseNmfcNumberApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getNmfcNumber(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseNmfcNumberApi->getNmfcNumber: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:NmfcNumberServiceModel.adoc[*NmfcNumberServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getNmfcNumbers*
+
+____
+QueryResultNmfcNumberServiceModel getNmfcNumbers(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseNmfcNumberApi();
+var request = new NmfcNumberQueryRequest(); // NmfcNumberQueryRequest |
+
+try {
+    var result = api_instance.getNmfcNumbers(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseNmfcNumberApi->getNmfcNumbers: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:NmfcNumberQueryRequest.adoc[*NmfcNumberQueryRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:QueryResultNmfcNumberServiceModel.adoc[*QueryResultNmfcNumberServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *saveNmfcNumber*
+
+____
+NmfcNumberServiceModel saveNmfcNumber(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseNmfcNumberApi();
+var model = new NmfcNumberServiceModel(); // NmfcNumberServiceModel |
+
+try {
+    var result = api_instance.saveNmfcNumber(model);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseNmfcNumberApi->saveNmfcNumber: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:NmfcNumberServiceModel.adoc[*NmfcNumberServiceModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:NmfcNumberServiceModel.adoc[*NmfcNumberServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]

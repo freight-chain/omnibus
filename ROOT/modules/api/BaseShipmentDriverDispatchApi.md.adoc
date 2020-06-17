@@ -1,0 +1,73 @@
+= api_client.api.BaseShipmentDriverDispatchApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:BaseShipmentDriverDispatchApi.md#getShipmentDriverDispatches[*getShipmentDriverDispatches*]
+| *POST* /getShipmentDriverDispatches
+|
+|===
+
+= *getShipmentDriverDispatches*
+
+____
+QueryResultShipmentDriverDispatchServiceModel getShipmentDriverDispatches(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseShipmentDriverDispatchApi();
+var request = new ShipmentDriverDispatchQueryRequest(); // ShipmentDriverDispatchQueryRequest |
+
+try {
+    var result = api_instance.getShipmentDriverDispatches(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseShipmentDriverDispatchApi->getShipmentDriverDispatches: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:ShipmentDriverDispatchQueryRequest.adoc[*ShipmentDriverDispatchQueryRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:QueryResultShipmentDriverDispatchServiceModel.adoc[*QueryResultShipmentDriverDispatchServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]

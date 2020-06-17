@@ -1,0 +1,246 @@
+= api_client.api.BaseTrailerApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:BaseTrailerApi.md#deleteTrailer[*deleteTrailer*]
+| *POST* /deleteTrailer
+|
+
+| link:BaseTrailerApi.md#getTrailer[*getTrailer*]
+| *GET* /getTrailer
+|
+
+| link:BaseTrailerApi.md#getTrailers[*getTrailers*]
+| *POST* /getTrailers
+|
+
+| link:BaseTrailerApi.md#saveTrailer[*saveTrailer*]
+| *POST* /saveTrailer
+|
+|===
+
+= *deleteTrailer*
+
+____
+deleteTrailer(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseTrailerApi();
+var id = id_example; // String |
+
+try {
+    api_instance.deleteTrailer(id);
+} catch (e) {
+    print("Exception when calling BaseTrailerApi->deleteTrailer: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getTrailer*
+
+____
+TrailerServiceModel getTrailer(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseTrailerApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getTrailer(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseTrailerApi->getTrailer: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:TrailerServiceModel.adoc[*TrailerServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getTrailers*
+
+____
+QueryResultTrailerServiceModel getTrailers(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseTrailerApi();
+var request = new TrailerQueryRequest(); // TrailerQueryRequest |
+
+try {
+    var result = api_instance.getTrailers(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseTrailerApi->getTrailers: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:TrailerQueryRequest.adoc[*TrailerQueryRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:QueryResultTrailerServiceModel.adoc[*QueryResultTrailerServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *saveTrailer*
+
+____
+TrailerServiceModel saveTrailer(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseTrailerApi();
+var model = new TrailerServiceModel(); // TrailerServiceModel |
+
+try {
+    var result = api_instance.saveTrailer(model);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseTrailerApi->saveTrailer: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:TrailerServiceModel.adoc[*TrailerServiceModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:TrailerServiceModel.adoc[*TrailerServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]

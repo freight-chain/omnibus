@@ -1,0 +1,246 @@
+= api_client.api.BaseOrderItemApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:BaseOrderItemApi.md#deleteOrderItem[*deleteOrderItem*]
+| *POST* /deleteOrderItem
+|
+
+| link:BaseOrderItemApi.md#getOrderItem[*getOrderItem*]
+| *GET* /getOrderItem
+|
+
+| link:BaseOrderItemApi.md#getOrderItems[*getOrderItems*]
+| *POST* /getOrderItems
+|
+
+| link:BaseOrderItemApi.md#saveOrderItem[*saveOrderItem*]
+| *POST* /saveOrderItem
+|
+|===
+
+= *deleteOrderItem*
+
+____
+deleteOrderItem(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseOrderItemApi();
+var id = id_example; // String |
+
+try {
+    api_instance.deleteOrderItem(id);
+} catch (e) {
+    print("Exception when calling BaseOrderItemApi->deleteOrderItem: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getOrderItem*
+
+____
+OrderItemServiceModel getOrderItem(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseOrderItemApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getOrderItem(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseOrderItemApi->getOrderItem: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:OrderItemServiceModel.adoc[*OrderItemServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getOrderItems*
+
+____
+QueryResultOrderItemServiceModel getOrderItems(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseOrderItemApi();
+var request = new OrderItemQueryRequest(); // OrderItemQueryRequest |
+
+try {
+    var result = api_instance.getOrderItems(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseOrderItemApi->getOrderItems: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:OrderItemQueryRequest.adoc[*OrderItemQueryRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:QueryResultOrderItemServiceModel.adoc[*QueryResultOrderItemServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *saveOrderItem*
+
+____
+OrderItemServiceModel saveOrderItem(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseOrderItemApi();
+var model = new OrderItemServiceModel(); // OrderItemServiceModel |
+
+try {
+    var result = api_instance.saveOrderItem(model);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseOrderItemApi->saveOrderItem: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:OrderItemServiceModel.adoc[*OrderItemServiceModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:OrderItemServiceModel.adoc[*OrderItemServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]

@@ -1,0 +1,246 @@
+= api_client.api.BaseShipperApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:BaseShipperApi.md#deleteShipper[*deleteShipper*]
+| *POST* /deleteShipper
+|
+
+| link:BaseShipperApi.md#getShipper[*getShipper*]
+| *GET* /getShipper
+|
+
+| link:BaseShipperApi.md#getShippers[*getShippers*]
+| *POST* /getShippers
+|
+
+| link:BaseShipperApi.md#saveShipper[*saveShipper*]
+| *POST* /saveShipper
+|
+|===
+
+= *deleteShipper*
+
+____
+deleteShipper(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseShipperApi();
+var id = id_example; // String |
+
+try {
+    api_instance.deleteShipper(id);
+} catch (e) {
+    print("Exception when calling BaseShipperApi->deleteShipper: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getShipper*
+
+____
+ShipperServiceModel getShipper(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseShipperApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getShipper(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseShipperApi->getShipper: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:ShipperServiceModel.adoc[*ShipperServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getShippers*
+
+____
+QueryResultShipperServiceModel getShippers(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseShipperApi();
+var request = new ShipperQueryRequest(); // ShipperQueryRequest |
+
+try {
+    var result = api_instance.getShippers(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseShipperApi->getShippers: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:ShipperQueryRequest.adoc[*ShipperQueryRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:QueryResultShipperServiceModel.adoc[*QueryResultShipperServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *saveShipper*
+
+____
+ShipperServiceModel saveShipper(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseShipperApi();
+var model = new ShipperServiceModel(); // ShipperServiceModel |
+
+try {
+    var result = api_instance.saveShipper(model);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseShipperApi->saveShipper: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:ShipperServiceModel.adoc[*ShipperServiceModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:ShipperServiceModel.adoc[*ShipperServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]

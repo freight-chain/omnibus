@@ -1,0 +1,14 @@
+= api_client.model.CarrierInformationServiceModel
+
+== Load the model package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+== Properties
+
+Name | Type | Description | Notes -------- | --------- | --------- | --------- *id* | *String* |  | [optional]  *handlingUnitQty* | *int* |  | [optional]  *handlingUnitType* | *String* |  |  *packageQty* | *int* |  | [optional]  *packageType* | *String* |  |  *weight* | *double* |  | [optional]  *hm* | *bool* |  | [optional]  *description* | *String* |  | [optional]  *nmfcNumber* | *String* |  | [optional]  *nmfcClass* | *String* |  | [optional]
+
+link:../README.md#documentation-for-models[[Back to Model list\]] link:../README.md#documentation-for-api-endpoints[[Back to API list\]] xref:../README.adoc[[Back to README\]]

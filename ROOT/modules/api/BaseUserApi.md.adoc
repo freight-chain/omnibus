@@ -1,0 +1,246 @@
+= api_client.api.BaseUserApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:BaseUserApi.md#deleteUser[*deleteUser*]
+| *POST* /deleteUser
+|
+
+| link:BaseUserApi.md#getUser[*getUser*]
+| *GET* /getUser
+|
+
+| link:BaseUserApi.md#getUsers[*getUsers*]
+| *POST* /getUsers
+|
+
+| link:BaseUserApi.md#saveUser[*saveUser*]
+| *POST* /saveUser
+|
+|===
+
+= *deleteUser*
+
+____
+deleteUser(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseUserApi();
+var id = id_example; // String |
+
+try {
+    api_instance.deleteUser(id);
+} catch (e) {
+    print("Exception when calling BaseUserApi->deleteUser: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getUser*
+
+____
+UserServiceModel getUser(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseUserApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getUser(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseUserApi->getUser: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:UserServiceModel.adoc[*UserServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getUsers*
+
+____
+QueryResultUserServiceModel getUsers(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseUserApi();
+var request = new UserQueryRequest(); // UserQueryRequest |
+
+try {
+    var result = api_instance.getUsers(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseUserApi->getUsers: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:UserQueryRequest.adoc[*UserQueryRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:QueryResultUserServiceModel.adoc[*QueryResultUserServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *saveUser*
+
+____
+UserServiceModel saveUser(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseUserApi();
+var model = new UserServiceModel(); // UserServiceModel |
+
+try {
+    var result = api_instance.saveUser(model);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseUserApi->saveUser: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:UserServiceModel.adoc[*UserServiceModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:UserServiceModel.adoc[*UserServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]

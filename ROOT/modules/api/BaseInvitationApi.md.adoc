@@ -1,0 +1,255 @@
+= api_client.api.BaseInvitationApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:BaseInvitationApi.md#deleteInvitation[*deleteInvitation*]
+| *POST* /deleteInvitation
+|
+
+| link:BaseInvitationApi.md#getInvitation[*getInvitation*]
+| *GET* /getInvitation
+|
+
+| link:BaseInvitationApi.md#getInvitations[*getInvitations*]
+| *POST* /getInvitations
+|
+
+| link:BaseInvitationApi.md#saveInvitation[*saveInvitation*]
+| *POST* /saveInvitation
+|
+|===
+
+= *deleteInvitation*
+
+____
+InvitationServiceModel deleteInvitation(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new BaseInvitationApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.deleteInvitation(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseInvitationApi->deleteInvitation: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:InvitationServiceModel.adoc[*InvitationServiceModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getInvitation*
+
+____
+InvitationServiceModel getInvitation(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new BaseInvitationApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getInvitation(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseInvitationApi->getInvitation: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:InvitationServiceModel.adoc[*InvitationServiceModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getInvitations*
+
+____
+QueryResultInvitationServiceModel getInvitations(query)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new BaseInvitationApi();
+var query = new Query(); // Query |
+
+try {
+    var result = api_instance.getInvitations(query);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseInvitationApi->getInvitations: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *query*
+| xref:Query.adoc[*Query*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:QueryResultInvitationServiceModel.adoc[*QueryResultInvitationServiceModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *saveInvitation*
+
+____
+InvitationServiceModel saveInvitation(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new BaseInvitationApi();
+var model = new InvitationServiceModel(); // InvitationServiceModel |
+
+try {
+    var result = api_instance.saveInvitation(model);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseInvitationApi->saveInvitation: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:InvitationServiceModel.adoc[*InvitationServiceModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:InvitationServiceModel.adoc[*InvitationServiceModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]

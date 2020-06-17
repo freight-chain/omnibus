@@ -1,0 +1,362 @@
+= api_client.api.BaseRoleApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:BaseRoleApi.md#addPermission[*addPermission*]
+| *POST* /addPermission
+|
+
+| link:BaseRoleApi.md#addUser[*addUser*]
+| *POST* /addUser
+|
+
+| link:BaseRoleApi.md#deleteRole[*deleteRole*]
+| *POST* /deleteRole
+|
+
+| link:BaseRoleApi.md#getRole[*getRole*]
+| *GET* /getRole
+|
+
+| link:BaseRoleApi.md#getRoles[*getRoles*]
+| *POST* /getRoles
+|
+
+| link:BaseRoleApi.md#saveRole[*saveRole*]
+| *POST* /saveRole
+|
+|===
+
+= *addPermission*
+
+____
+RoleServiceModel addPermission(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseRoleApi();
+var request = new AddPermissionRequest(); // AddPermissionRequest |
+
+try {
+    var result = api_instance.addPermission(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseRoleApi->addPermission: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:AddPermissionRequest.adoc[*AddPermissionRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:RoleServiceModel.adoc[*RoleServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *addUser*
+
+____
+RoleServiceModel addUser(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseRoleApi();
+var request = new AddUserRequest(); // AddUserRequest |
+
+try {
+    var result = api_instance.addUser(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseRoleApi->addUser: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:AddUserRequest.adoc[*AddUserRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:RoleServiceModel.adoc[*RoleServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *deleteRole*
+
+____
+deleteRole(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseRoleApi();
+var id = id_example; // String |
+
+try {
+    api_instance.deleteRole(id);
+} catch (e) {
+    print("Exception when calling BaseRoleApi->deleteRole: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getRole*
+
+____
+RoleServiceModel getRole(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseRoleApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getRole(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseRoleApi->getRole: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:RoleServiceModel.adoc[*RoleServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getRoles*
+
+____
+QueryResultRoleServiceModel getRoles(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseRoleApi();
+var request = new RoleQueryRequest(); // RoleQueryRequest |
+
+try {
+    var result = api_instance.getRoles(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseRoleApi->getRoles: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:RoleQueryRequest.adoc[*RoleQueryRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:QueryResultRoleServiceModel.adoc[*QueryResultRoleServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *saveRole*
+
+____
+RoleServiceModel saveRole(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseRoleApi();
+var model = new RoleServiceModel(); // RoleServiceModel |
+
+try {
+    var result = api_instance.saveRole(model);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseRoleApi->saveRole: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:RoleServiceModel.adoc[*RoleServiceModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:RoleServiceModel.adoc[*RoleServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]

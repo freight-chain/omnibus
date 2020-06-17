@@ -1,0 +1,246 @@
+= api_client.api.BaseLineItemTypeApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:BaseLineItemTypeApi.md#deleteLineItemType[*deleteLineItemType*]
+| *POST* /deleteLineItemType
+|
+
+| link:BaseLineItemTypeApi.md#getLineItemType[*getLineItemType*]
+| *GET* /getLineItemType
+|
+
+| link:BaseLineItemTypeApi.md#getLineItemTypes[*getLineItemTypes*]
+| *POST* /getLineItemTypes
+|
+
+| link:BaseLineItemTypeApi.md#saveLineItemType[*saveLineItemType*]
+| *POST* /saveLineItemType
+|
+|===
+
+= *deleteLineItemType*
+
+____
+deleteLineItemType(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseLineItemTypeApi();
+var id = id_example; // String |
+
+try {
+    api_instance.deleteLineItemType(id);
+} catch (e) {
+    print("Exception when calling BaseLineItemTypeApi->deleteLineItemType: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getLineItemType*
+
+____
+LineItemTypeServiceModel getLineItemType(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseLineItemTypeApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getLineItemType(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseLineItemTypeApi->getLineItemType: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:LineItemTypeServiceModel.adoc[*LineItemTypeServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getLineItemTypes*
+
+____
+QueryResultLineItemTypeServiceModel getLineItemTypes(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseLineItemTypeApi();
+var request = new LineItemTypeQueryRequest(); // LineItemTypeQueryRequest |
+
+try {
+    var result = api_instance.getLineItemTypes(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseLineItemTypeApi->getLineItemTypes: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:LineItemTypeQueryRequest.adoc[*LineItemTypeQueryRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:QueryResultLineItemTypeServiceModel.adoc[*QueryResultLineItemTypeServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *saveLineItemType*
+
+____
+LineItemTypeServiceModel saveLineItemType(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseLineItemTypeApi();
+var model = new LineItemTypeServiceModel(); // LineItemTypeServiceModel |
+
+try {
+    var result = api_instance.saveLineItemType(model);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseLineItemTypeApi->saveLineItemType: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:LineItemTypeServiceModel.adoc[*LineItemTypeServiceModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:LineItemTypeServiceModel.adoc[*LineItemTypeServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]

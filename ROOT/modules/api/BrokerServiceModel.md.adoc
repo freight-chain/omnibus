@@ -1,0 +1,14 @@
+= api_client.model.BrokerServiceModel
+
+== Load the model package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+== Properties
+
+Name | Type | Description | Notes -------- | --------- | --------- | --------- *id* | *String* |  | [optional]  *companyId* | *String* |  | [optional]  *company* | xref:CompanyServiceModel.adoc[*CompanyServiceModel*] |  | [optional]  *name* | *String* |  | [optional]  *isActive* | *bool* |  | [optional]  *label* | *String* |  | [optional]
+
+link:../README.md#documentation-for-models[[Back to Model list\]] link:../README.md#documentation-for-api-endpoints[[Back to API list\]] xref:../README.adoc[[Back to README\]]

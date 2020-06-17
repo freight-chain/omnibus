@@ -1,0 +1,20 @@
+
+GRADLE
+
+gradle_version=6.5
+wget -c https://services.gradle.org/distributions/gradle-6.5-bin.zip
+
+unzip  gradle-${gradle_version}-all.zip -d /opt
+ln -s /opt/gradle-${gradle_version} /opt/gradle
+printf "export GRADLE_HOME=/opt/gradle\nexport PATH=\$PATH:\$GRADLE_HOME/bin\n" > /etc/profile.d/gradle.sh
+source /etc/profile.d/gradle.sh
+# check installation
+gradle -v
+
+# Enable EPEL Extra Packages for Enterprise Linux (EPEL)
+sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm -y
+sudo yum –import https://artifacts.elastic.co/GPG-KEY-elasticsearch
+
+wget -c https://artifacts.elastic.co/downloads/logstash/logstash-7.7.1.rpm
+sudo yum install logstash-7.7.1.rpm -y
+

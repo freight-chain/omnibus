@@ -1,0 +1,374 @@
+= api_client.api.AccountingInvoiceApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:AccountingInvoiceApi.md#deleteAccountingInvoice[*deleteAccountingInvoice*]
+| *POST* /api/AccountingInvoice/deleteAccountingInvoice
+|
+
+| link:AccountingInvoiceApi.md#exportReconcile[*exportReconcile*]
+| *POST* /api/AccountingInvoice/exportReconcile
+|
+
+| link:AccountingInvoiceApi.md#getAccountingInvoice[*getAccountingInvoice*]
+| *GET* /api/AccountingInvoice/getAccountingInvoice
+|
+
+| link:AccountingInvoiceApi.md#getAccountingInvoices[*getAccountingInvoices*]
+| *POST* /api/AccountingInvoice/getAccountingInvoices
+|
+
+| link:AccountingInvoiceApi.md#saveAccountingInvoice[*saveAccountingInvoice*]
+| *POST* /api/AccountingInvoice/saveAccountingInvoice
+|
+
+| link:AccountingInvoiceApi.md#sendInvoice[*sendInvoice*]
+| *POST* /api/AccountingInvoice/sendInvoice
+|
+|===
+
+= *deleteAccountingInvoice*
+
+____
+deleteAccountingInvoice(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountingInvoiceApi();
+var id = id_example; // String |
+
+try {
+    api_instance.deleteAccountingInvoice(id);
+} catch (e) {
+    print("Exception when calling AccountingInvoiceApi->deleteAccountingInvoice: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *exportReconcile*
+
+____
+MultipartFile exportReconcile(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountingInvoiceApi();
+var request = new AccountingInvoiceQueryRequest(); // AccountingInvoiceQueryRequest |
+
+try {
+    var result = api_instance.exportReconcile(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountingInvoiceApi->exportReconcile: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:AccountingInvoiceQueryRequest.adoc[*AccountingInvoiceQueryRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:File.adoc[*MultipartFile*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: application/octet-stream
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getAccountingInvoice*
+
+____
+AccountingInvoiceServiceModel getAccountingInvoice(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountingInvoiceApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getAccountingInvoice(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountingInvoiceApi->getAccountingInvoice: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:AccountingInvoiceServiceModel.adoc[*AccountingInvoiceServiceModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getAccountingInvoices*
+
+____
+QueryResultAccountingInvoiceServiceModel getAccountingInvoices(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountingInvoiceApi();
+var request = new AccountingInvoiceQueryRequest(); // AccountingInvoiceQueryRequest |
+
+try {
+    var result = api_instance.getAccountingInvoices(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountingInvoiceApi->getAccountingInvoices: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:AccountingInvoiceQueryRequest.adoc[*AccountingInvoiceQueryRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:QueryResultAccountingInvoiceServiceModel.adoc[*QueryResultAccountingInvoiceServiceModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *saveAccountingInvoice*
+
+____
+AccountingInvoiceServiceModel saveAccountingInvoice(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountingInvoiceApi();
+var model = new AccountingInvoiceServiceModel(); // AccountingInvoiceServiceModel |
+
+try {
+    var result = api_instance.saveAccountingInvoice(model);
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountingInvoiceApi->saveAccountingInvoice: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:AccountingInvoiceServiceModel.adoc[*AccountingInvoiceServiceModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:AccountingInvoiceServiceModel.adoc[*AccountingInvoiceServiceModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *sendInvoice*
+
+____
+AccountingInvoiceServiceModel sendInvoice(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new AccountingInvoiceApi();
+var request = new SendInvoiceRequest(); // SendInvoiceRequest |
+
+try {
+    var result = api_instance.sendInvoice(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling AccountingInvoiceApi->sendInvoice: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:SendInvoiceRequest.adoc[*SendInvoiceRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:AccountingInvoiceServiceModel.adoc[*AccountingInvoiceServiceModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]

@@ -1,0 +1,14 @@
+= api_client.model.AnalyticServiceModel
+
+== Load the model package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+== Properties
+
+Name | Type | Description | Notes -------- | --------- | --------- | --------- *title* | *String* |  | [optional]  *description* | *String* |  | [optional]  *data* | xref:Object.adoc[*Object*] |  | [optional]  *icon* | *String* |  | [optional]  *visible* | *bool* |  | [optional]
+
+link:../README.md#documentation-for-models[[Back to Model list\]] link:../README.md#documentation-for-api-endpoints[[Back to API list\]] xref:../README.adoc[[Back to README\]]

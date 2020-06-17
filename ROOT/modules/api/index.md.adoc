@@ -1,0 +1,43 @@
+= Training program
+
+This interactive training program is designed to help you understand how to create and edit content using Redocly's developer portal.
+It's a great companion to our https://docs.redoc.ly/developer-portal/introduction/[developer portal docs].
+
+Spend between an hour and a day playing with the most commonly utilized features.
+
+== Prerequisites
+
+* Basic Git and markdown knowledge
+* Node and yarn installed
+* A text editor or IDE (we like VS Code)
+* xref:setup.adoc[Setup the developer portal]
+
+== Training exercises
+
+Follow the training exercises sequentially.
+Or cherry-pick them independently if you're limited on time.
+
+* xref:markdown.adoc[Plain markdown pages]
+* xref:awesome/folders.adoc[Changing the url paths]
+* xref:mermaid.adoc[Markdown with a mermaid diagram]
+* xref:page-table-of-contents.adoc[The page table of contents]
+* xref:sidebar-nav.adoc[Adding a page to the sidebar navigation]
+* xref:search.adoc[Disabling the search box]
+* xref:nav-footer.adoc[Changing nav and footer links]
+* xref:logo.adoc[Change your logo]
+* xref:metadata.adoc[Change metadata]
+* xref:colors.adoc[Change your colors]
+* xref:typography.adoc[Change your typography]
+* xref:analytics.adoc[Enable Google Analytics]
+* xref:home-page.adoc[Modify the homepage]
+* xref:oas-definitions.adoc[Modify the OAS definitions]
+* link:mdx.mdx[Adding a response object to an MDX page]
+* xref:upgrade.adoc[Upgrade to a different version of the developer portal]
+
+Upon completion, you may have questions, or you may be ready to start building your content out.
+Learn how to https://docs.redoc.ly/ci-cd-workflows/[deploy the developer portal] to our global CDN or contact us about purchasing an enterprise license key.
+
+== Asking for help
+
+Don't be shy...
+we're here to help.

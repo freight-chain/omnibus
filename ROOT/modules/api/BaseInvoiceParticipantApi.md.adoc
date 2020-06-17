@@ -1,0 +1,246 @@
+= api_client.api.BaseInvoiceParticipantApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:BaseInvoiceParticipantApi.md#deleteInvoiceParticipant[*deleteInvoiceParticipant*]
+| *POST* /deleteInvoiceParticipant
+|
+
+| link:BaseInvoiceParticipantApi.md#getInvoiceParticipant[*getInvoiceParticipant*]
+| *GET* /getInvoiceParticipant
+|
+
+| link:BaseInvoiceParticipantApi.md#getInvoiceParticipants[*getInvoiceParticipants*]
+| *POST* /getInvoiceParticipants
+|
+
+| link:BaseInvoiceParticipantApi.md#saveInvoiceParticipant[*saveInvoiceParticipant*]
+| *POST* /saveInvoiceParticipant
+|
+|===
+
+= *deleteInvoiceParticipant*
+
+____
+deleteInvoiceParticipant(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseInvoiceParticipantApi();
+var id = id_example; // String |
+
+try {
+    api_instance.deleteInvoiceParticipant(id);
+} catch (e) {
+    print("Exception when calling BaseInvoiceParticipantApi->deleteInvoiceParticipant: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getInvoiceParticipant*
+
+____
+InvoiceParticipantServiceModel getInvoiceParticipant(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseInvoiceParticipantApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getInvoiceParticipant(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseInvoiceParticipantApi->getInvoiceParticipant: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:InvoiceParticipantServiceModel.adoc[*InvoiceParticipantServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getInvoiceParticipants*
+
+____
+QueryResultInvoiceParticipantServiceModel getInvoiceParticipants(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseInvoiceParticipantApi();
+var request = new InvoiceParticipantQueryRequest(); // InvoiceParticipantQueryRequest |
+
+try {
+    var result = api_instance.getInvoiceParticipants(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseInvoiceParticipantApi->getInvoiceParticipants: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:InvoiceParticipantQueryRequest.adoc[*InvoiceParticipantQueryRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:QueryResultInvoiceParticipantServiceModel.adoc[*QueryResultInvoiceParticipantServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *saveInvoiceParticipant*
+
+____
+InvoiceParticipantServiceModel saveInvoiceParticipant(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseInvoiceParticipantApi();
+var model = new InvoiceParticipantServiceModel(); // InvoiceParticipantServiceModel |
+
+try {
+    var result = api_instance.saveInvoiceParticipant(model);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseInvoiceParticipantApi->saveInvoiceParticipant: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:InvoiceParticipantServiceModel.adoc[*InvoiceParticipantServiceModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:InvoiceParticipantServiceModel.adoc[*InvoiceParticipantServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]

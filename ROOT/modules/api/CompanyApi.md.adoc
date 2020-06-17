@@ -1,0 +1,254 @@
+= api_client.api.CompanyApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:CompanyApi.md#deleteCompany[*deleteCompany*]
+| *POST* /api/Company/deleteCompany
+|
+
+| link:CompanyApi.md#getCompanies[*getCompanies*]
+| *POST* /api/Company/getCompanies
+|
+
+| link:CompanyApi.md#getCompany[*getCompany*]
+| *GET* /api/Company/getCompany
+|
+
+| link:CompanyApi.md#saveCompany[*saveCompany*]
+| *POST* /api/Company/saveCompany
+|
+|===
+
+= *deleteCompany*
+
+____
+deleteCompany(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new CompanyApi();
+var id = id_example; // String |
+
+try {
+    api_instance.deleteCompany(id);
+} catch (e) {
+    print("Exception when calling CompanyApi->deleteCompany: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getCompanies*
+
+____
+QueryResultCompanyServiceModel getCompanies(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new CompanyApi();
+var request = new CompanyQueryRequest(); // CompanyQueryRequest |
+
+try {
+    var result = api_instance.getCompanies(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling CompanyApi->getCompanies: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:CompanyQueryRequest.adoc[*CompanyQueryRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:QueryResultCompanyServiceModel.adoc[*QueryResultCompanyServiceModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getCompany*
+
+____
+CompanyServiceModel getCompany(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new CompanyApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getCompany(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling CompanyApi->getCompany: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:CompanyServiceModel.adoc[*CompanyServiceModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *saveCompany*
+
+____
+CompanyServiceModel saveCompany(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//api_client.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new CompanyApi();
+var model = new CompanyServiceModel(); // CompanyServiceModel |
+
+try {
+    var result = api_instance.saveCompany(model);
+    print(result);
+} catch (e) {
+    print("Exception when calling CompanyApi->saveCompany: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:CompanyServiceModel.adoc[*CompanyServiceModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:CompanyServiceModel.adoc[*CompanyServiceModel*]
+
+[discrete]
+=== Authorization
+
+link:../README.md#oauth2[oauth2]
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]

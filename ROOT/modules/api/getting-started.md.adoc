@@ -1,0 +1,64 @@
+= Getting started with *Redocly Portal*
+
+This page lists steps to install and run the *Portal*.
+
+'''
+
+[discrete]
+=== Before you begin
+
+Before installing the *Redocly Portal*, make sure to do the following:
+
+* Install https://www.npmjs.com/get-npm[`npm`] or https://yarnpkg.com/lang/en/docs/install/#windows-stable[`yarn`].
+These package managers work across all the major operating systems).
+* Know how to run the commands from the CLI (for example, `yarn install`).
+For Windows, we recommend using Git Bash.
+* Know the https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html[basic git techniques] (creating a branch, committing, and in our examples, opening a pull request on GitHub.)
+* Get familiar with Markdown.
+We recommend using the https://code.visualstudio.com/download[Visual Studio Code] application to manage your files.
+
+////
+/to do: add links to additional info to the each item./
+If any of these assumptions are incorrect, please let us know and we can find resources to help you acquire that knowledge.
+////
+
+[discrete]
+=== Install the Portal
+
+. Clone the GitHub repository shared by Redocly.
+
+[source,bash]
+----
+git clone <url provided by Redocly>
+----
+
+. Install the project.
+
+[source,bash]
+----
+yarn install
+----
+
+*NOTE*: If an error occurs during the installation, delete the `yarn.lock` file, and then try to install *Redocly Portal* again.
+
+----
+rm yarn.lock
+----
+
+[source,bash]
+----
+yarn install
+----
+
+If the installation problem persists, please contact the link:contact@redoc.ly[Redocly support].
+
+[discrete]
+=== Run the *Portal*
+
+[source,bash]
+----
+yarn start
+----
+
+You can now preview your files on the local server.
+The corresponding address will be displayed in the terminal.

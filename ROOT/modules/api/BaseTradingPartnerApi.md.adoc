@@ -1,0 +1,304 @@
+= api_client.api.BaseTradingPartnerApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:BaseTradingPartnerApi.md#deleteTradingPartner[*deleteTradingPartner*]
+| *POST* /deleteTradingPartner
+|
+
+| link:BaseTradingPartnerApi.md#getTradingPartner[*getTradingPartner*]
+| *GET* /getTradingPartner
+|
+
+| link:BaseTradingPartnerApi.md#getTradingPartners[*getTradingPartners*]
+| *POST* /getTradingPartners
+|
+
+| link:BaseTradingPartnerApi.md#saveTradingPartner[*saveTradingPartner*]
+| *POST* /saveTradingPartner
+|
+
+| link:BaseTradingPartnerApi.md#sendTestMessage[*sendTestMessage*]
+| *POST* /sendTestMessage
+|
+|===
+
+= *deleteTradingPartner*
+
+____
+deleteTradingPartner(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseTradingPartnerApi();
+var id = id_example; // String |
+
+try {
+    api_instance.deleteTradingPartner(id);
+} catch (e) {
+    print("Exception when calling BaseTradingPartnerApi->deleteTradingPartner: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getTradingPartner*
+
+____
+TradingPartnerServiceModel getTradingPartner(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseTradingPartnerApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getTradingPartner(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseTradingPartnerApi->getTradingPartner: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:TradingPartnerServiceModel.adoc[*TradingPartnerServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getTradingPartners*
+
+____
+QueryResultTradingPartnerServiceModel getTradingPartners(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseTradingPartnerApi();
+var request = new TradingPartnerQueryRequest(); // TradingPartnerQueryRequest |
+
+try {
+    var result = api_instance.getTradingPartners(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseTradingPartnerApi->getTradingPartners: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:TradingPartnerQueryRequest.adoc[*TradingPartnerQueryRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:QueryResultTradingPartnerServiceModel.adoc[*QueryResultTradingPartnerServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *saveTradingPartner*
+
+____
+TradingPartnerServiceModel saveTradingPartner(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseTradingPartnerApi();
+var model = new TradingPartnerServiceModel(); // TradingPartnerServiceModel |
+
+try {
+    var result = api_instance.saveTradingPartner(model);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseTradingPartnerApi->saveTradingPartner: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:TradingPartnerServiceModel.adoc[*TradingPartnerServiceModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:TradingPartnerServiceModel.adoc[*TradingPartnerServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *sendTestMessage*
+
+____
+TradingPartnerServiceModel sendTestMessage(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseTradingPartnerApi();
+var request = new SendTestMessageRequest(); // SendTestMessageRequest |
+
+try {
+    var result = api_instance.sendTestMessage(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseTradingPartnerApi->sendTestMessage: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:SendTestMessageRequest.adoc[*SendTestMessageRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:TradingPartnerServiceModel.adoc[*TradingPartnerServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]

@@ -1,0 +1,246 @@
+= api_client.api.BaseTradingPartnerMessageApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:BaseTradingPartnerMessageApi.md#deleteTradingPartnerMessage[*deleteTradingPartnerMessage*]
+| *POST* /deleteTradingPartnerMessage
+|
+
+| link:BaseTradingPartnerMessageApi.md#getTradingPartnerMessage[*getTradingPartnerMessage*]
+| *GET* /getTradingPartnerMessage
+|
+
+| link:BaseTradingPartnerMessageApi.md#getTradingPartnerMessages[*getTradingPartnerMessages*]
+| *POST* /getTradingPartnerMessages
+|
+
+| link:BaseTradingPartnerMessageApi.md#saveTradingPartnerMessage[*saveTradingPartnerMessage*]
+| *POST* /saveTradingPartnerMessage
+|
+|===
+
+= *deleteTradingPartnerMessage*
+
+____
+deleteTradingPartnerMessage(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseTradingPartnerMessageApi();
+var id = id_example; // String |
+
+try {
+    api_instance.deleteTradingPartnerMessage(id);
+} catch (e) {
+    print("Exception when calling BaseTradingPartnerMessageApi->deleteTradingPartnerMessage: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getTradingPartnerMessage*
+
+____
+TradingPartnerMessageServiceModel getTradingPartnerMessage(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseTradingPartnerMessageApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getTradingPartnerMessage(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseTradingPartnerMessageApi->getTradingPartnerMessage: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:TradingPartnerMessageServiceModel.adoc[*TradingPartnerMessageServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getTradingPartnerMessages*
+
+____
+QueryResultTradingPartnerMessageServiceModel getTradingPartnerMessages(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseTradingPartnerMessageApi();
+var request = new TradingPartnerMessageQueryRequest(); // TradingPartnerMessageQueryRequest |
+
+try {
+    var result = api_instance.getTradingPartnerMessages(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseTradingPartnerMessageApi->getTradingPartnerMessages: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:TradingPartnerMessageQueryRequest.adoc[*TradingPartnerMessageQueryRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:QueryResultTradingPartnerMessageServiceModel.adoc[*QueryResultTradingPartnerMessageServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *saveTradingPartnerMessage*
+
+____
+TradingPartnerMessageServiceModel saveTradingPartnerMessage(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseTradingPartnerMessageApi();
+var model = new TradingPartnerMessageServiceModel(); // TradingPartnerMessageServiceModel |
+
+try {
+    var result = api_instance.saveTradingPartnerMessage(model);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseTradingPartnerMessageApi->saveTradingPartnerMessage: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:TradingPartnerMessageServiceModel.adoc[*TradingPartnerMessageServiceModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:TradingPartnerMessageServiceModel.adoc[*TradingPartnerMessageServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]

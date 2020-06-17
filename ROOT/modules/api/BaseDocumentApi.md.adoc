@@ -1,0 +1,246 @@
+= api_client.api.BaseDocumentApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:BaseDocumentApi.md#deleteDocument[*deleteDocument*]
+| *POST* /deleteDocument
+|
+
+| link:BaseDocumentApi.md#getDocument[*getDocument*]
+| *GET* /getDocument
+|
+
+| link:BaseDocumentApi.md#getDocuments[*getDocuments*]
+| *POST* /getDocuments
+|
+
+| link:BaseDocumentApi.md#saveDocument[*saveDocument*]
+| *POST* /saveDocument
+|
+|===
+
+= *deleteDocument*
+
+____
+deleteDocument(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseDocumentApi();
+var id = id_example; // String |
+
+try {
+    api_instance.deleteDocument(id);
+} catch (e) {
+    print("Exception when calling BaseDocumentApi->deleteDocument: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getDocument*
+
+____
+DocumentServiceModel getDocument(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseDocumentApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getDocument(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseDocumentApi->getDocument: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:DocumentServiceModel.adoc[*DocumentServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getDocuments*
+
+____
+QueryResultDocumentServiceModel getDocuments(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseDocumentApi();
+var request = new DocumentQueryRequest(); // DocumentQueryRequest |
+
+try {
+    var result = api_instance.getDocuments(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseDocumentApi->getDocuments: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:DocumentQueryRequest.adoc[*DocumentQueryRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:QueryResultDocumentServiceModel.adoc[*QueryResultDocumentServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *saveDocument*
+
+____
+DocumentServiceModel saveDocument(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseDocumentApi();
+var model = new DocumentServiceModel(); // DocumentServiceModel |
+
+try {
+    var result = api_instance.saveDocument(model);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseDocumentApi->saveDocument: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:DocumentServiceModel.adoc[*DocumentServiceModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:DocumentServiceModel.adoc[*DocumentServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]

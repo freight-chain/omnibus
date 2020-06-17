@@ -1,0 +1,652 @@
+= api_client.api.BaseShipmentApi
+:doctype: book
+
+== Load the API package
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+----
+
+All URIs are relative to _https://localhost_
+
+|===
+| Method | HTTP request | Description
+
+| link:BaseShipmentApi.md#acceptShipment[*acceptShipment*]
+| *POST* /acceptShipment
+|
+
+| link:BaseShipmentApi.md#begin[*begin*]
+| *POST* /begin
+|
+
+| link:BaseShipmentApi.md#complete[*complete*]
+| *POST* /complete
+|
+
+| link:BaseShipmentApi.md#deleteShipment[*deleteShipment*]
+| *POST* /deleteShipment
+|
+
+| link:BaseShipmentApi.md#getShipment[*getShipment*]
+| *GET* /getShipment
+|
+
+| link:BaseShipmentApi.md#getShipments[*getShipments*]
+| *POST* /getShipments
+|
+
+| link:BaseShipmentApi.md#refreshPartners[*refreshPartners*]
+| *POST* /refreshPartners
+|
+
+| link:BaseShipmentApi.md#saveShipment[*saveShipment*]
+| *POST* /saveShipment
+|
+
+| link:BaseShipmentApi.md#shipmentCancel[*shipmentCancel*]
+| *POST* /shipmentCancel
+|
+
+| link:BaseShipmentApi.md#shipmentDecline[*shipmentDecline*]
+| *POST* /shipmentDecline
+|
+
+| link:BaseShipmentApi.md#trackingSettings[*trackingSettings*]
+| *POST* /trackingSettings
+|
+|===
+
+= *acceptShipment*
+
+____
+ShipmentServiceModel acceptShipment(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseShipmentApi();
+var request = new AcceptShipmentRequest(); // AcceptShipmentRequest |
+
+try {
+    var result = api_instance.acceptShipment(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseShipmentApi->acceptShipment: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:AcceptShipmentRequest.adoc[*AcceptShipmentRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:ShipmentServiceModel.adoc[*ShipmentServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *begin*
+
+____
+ShipmentServiceModel begin(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseShipmentApi();
+var request = new BeginRequest(); // BeginRequest |
+
+try {
+    var result = api_instance.begin(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseShipmentApi->begin: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:BeginRequest.adoc[*BeginRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:ShipmentServiceModel.adoc[*ShipmentServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *complete*
+
+____
+ShipmentServiceModel complete(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseShipmentApi();
+var request = new CompleteRequest(); // CompleteRequest |
+
+try {
+    var result = api_instance.complete(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseShipmentApi->complete: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:CompleteRequest.adoc[*CompleteRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:ShipmentServiceModel.adoc[*ShipmentServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *deleteShipment*
+
+____
+deleteShipment(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseShipmentApi();
+var id = id_example; // String |
+
+try {
+    api_instance.deleteShipment(id);
+} catch (e) {
+    print("Exception when calling BaseShipmentApi->deleteShipment: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+void (empty response body)
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getShipment*
+
+____
+ShipmentServiceModel getShipment(id)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseShipmentApi();
+var id = id_example; // String |
+
+try {
+    var result = api_instance.getShipment(id);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseShipmentApi->getShipment: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *id*
+| *String*
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:ShipmentServiceModel.adoc[*ShipmentServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: Not defined
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *getShipments*
+
+____
+QueryResultShipmentServiceModel getShipments(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseShipmentApi();
+var request = new ShipmentQueryRequest(); // ShipmentQueryRequest |
+
+try {
+    var result = api_instance.getShipments(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseShipmentApi->getShipments: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:ShipmentQueryRequest.adoc[*ShipmentQueryRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:QueryResultShipmentServiceModel.adoc[*QueryResultShipmentServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *refreshPartners*
+
+____
+ShipmentServiceModel refreshPartners(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseShipmentApi();
+var request = new RefreshPartnersRequest(); // RefreshPartnersRequest |
+
+try {
+    var result = api_instance.refreshPartners(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseShipmentApi->refreshPartners: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:RefreshPartnersRequest.adoc[*RefreshPartnersRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:ShipmentServiceModel.adoc[*ShipmentServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *saveShipment*
+
+____
+ShipmentServiceModel saveShipment(model)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseShipmentApi();
+var model = new ShipmentServiceModel(); // ShipmentServiceModel |
+
+try {
+    var result = api_instance.saveShipment(model);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseShipmentApi->saveShipment: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *model*
+| xref:ShipmentServiceModel.adoc[*ShipmentServiceModel*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:ShipmentServiceModel.adoc[*ShipmentServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *shipmentCancel*
+
+____
+ShipmentServiceModel shipmentCancel(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseShipmentApi();
+var request = new ShipmentCancelRequest(); // ShipmentCancelRequest |
+
+try {
+    var result = api_instance.shipmentCancel(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseShipmentApi->shipmentCancel: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:ShipmentCancelRequest.adoc[*ShipmentCancelRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:ShipmentServiceModel.adoc[*ShipmentServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *shipmentDecline*
+
+____
+ShipmentServiceModel shipmentDecline(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseShipmentApi();
+var request = new ShipmentDeclineRequest(); // ShipmentDeclineRequest |
+
+try {
+    var result = api_instance.shipmentDecline(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseShipmentApi->shipmentDecline: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:ShipmentDeclineRequest.adoc[*ShipmentDeclineRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:ShipmentServiceModel.adoc[*ShipmentServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
+
+= *trackingSettings*
+
+____
+ShipmentServiceModel trackingSettings(request)
+____
+
+[discrete]
+=== Example
+
+[source,dart]
+----
+import 'package:api_client/api.dart';
+
+var api_instance = new BaseShipmentApi();
+var request = new TrackingSettingsRequest(); // TrackingSettingsRequest |
+
+try {
+    var result = api_instance.trackingSettings(request);
+    print(result);
+} catch (e) {
+    print("Exception when calling BaseShipmentApi->trackingSettings: $e\n");
+}
+----
+
+[discrete]
+=== Parameters
+
+|===
+| Name | Type | Description | Notes
+
+| *request*
+| xref:TrackingSettingsRequest.adoc[*TrackingSettingsRequest*]
+|
+| [optional]
+|===
+
+[discrete]
+=== Return type
+
+xref:ShipmentServiceModel.adoc[*ShipmentServiceModel*]
+
+[discrete]
+=== Authorization
+
+No authorization required
+
+[discrete]
+=== HTTP request headers
+
+* *Content-Type*: application/json-patch+json, application/json, text/json, application/_*+json
+* *Accept*: Not defined
+
+<<,[Back to top]>> link:../README.md#documentation-for-api-endpoints[[Back to API list\]] link:../README.md#documentation-for-models[[Back to Model list\]] xref:../README.adoc[[Back to README\]]
